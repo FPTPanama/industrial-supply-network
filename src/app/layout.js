@@ -11,7 +11,6 @@ import "../styles/contact.scss";
 import "../styles/form-hrk.scss";
 import "../styles/services.scss";
 import "../styles/products.scss";
-import TagSide from "@/components/TagSide/TagSide";
 import classNames from "classnames";
 
 const inter = Inter({ subsets: ["latin"] });

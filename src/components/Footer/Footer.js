@@ -3,41 +3,8 @@ import Image from "next/image";
 import React from "react";
 import dayjs from "dayjs";
 
-import { FaInstagram, FaLinkedinIn } from "react-icons/fa6";
-import { FaGoogle } from "react-icons/fa";
-import { RiTwitterXLine } from "react-icons/ri";
-
 const Footer = ({ show = true }) => {
   const currentYear = dayjs().year();
-
-  const redSocItems = [
-    {
-      red: "instagram",
-      icon: (
-        <FaInstagram
-          size={"100%"}
-          // color='#003889'
-          color="#003889"
-        />
-      ),
-      url: "",
-    },
-    {
-      red: "twitter",
-      icon: <RiTwitterXLine size={25} color="#003889" />,
-      url: "",
-    },
-    {
-      red: "linkedin",
-      icon: <FaLinkedinIn size={"100%"} color="#003889" />,
-      url: "",
-    },
-    {
-      red: "google",
-      icon: <FaGoogle size={25} color="#003889" />,
-      url: "",
-    },
-  ];
 
   return (
     <>
