@@ -14,8 +14,8 @@ const Footer = ({ show = true }) => {
             <div className={classNames("ofiBox")}>
               <div className={classNames("imgBox", "overflow-hidden")}>
                 <Image
-                  src={"/img/hrk_logo_lineas_azul.svg"}
-                  alt={"logo hrk"}
+                  src={"/img/industrial_gear.svg"}
+                  alt={"Industrial Supply Network logo"}
                   width={200}
                   height={200}
                 />

@@ -13,7 +13,7 @@ const Contact = () => {
         <section className="conWraBox">
           <div className="infBox">
             <div className="imgBox">
-              <Image src={'/img/hrk_logo_lineas_azul.svg'} alt={'logo hrk'} width={200} height={200} />
+              <Image src={'/img/industrial_gear.svg'} alt={'Industrial Supply Network logo'} width={200} height={200} />
             </div>
             <p>
               <span>Industrial Supply Network</span> primary operations hub is situated in <span>Miami</span>, <span>United States</span> with regional and
