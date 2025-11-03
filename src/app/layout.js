@@ -28,7 +28,7 @@ export const metadata = {
     keywords: ["ferrous", "steel", "iron", "caustic soda"],
     images: [
       {
-        url: "https://hrkglobaltrade.com/img/hrk_metaimage.webp", // Aquí deberías poner la URL de tu imagen
+        url: "https://hrkglobaltrade.com/img/industrial_metaimage.webp",
         width: 1200,
         height: 630,
         alt: "Industrial Supply Network",
