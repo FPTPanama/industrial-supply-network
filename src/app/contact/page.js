@@ -1,6 +1,5 @@
 import FormHrk from '@/components/Form/FormHrk';
 import GeneralLayout from '@/components/GeneralLayout/GeneralLayout';
-import classNames from 'classnames';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
@@ -17,8 +16,8 @@ const Contact = () => {
               <Image src={'/img/hrk_logo_lineas_azul.svg'} alt={'logo hrk'} width={200} height={200} />
             </div>
             <p>
-              <span>HRK Global Trading</span> main contracting center is located in <span>Miami</span>, <span>United States</span> with local and
-              representative offices located in <span>Panama City</span>, <span>Panamá</span> and <span>Ciudad Guayana</span>, Venezuela.{' '}
+              <span>Industrial Supply Network</span> primary operations hub is situated in <span>Miami</span>, <span>United States</span> with regional and
+              branch offices situated in <span>Panama City</span>, <span>Panamá</span> and <span>Ciudad Guayana</span>, Venezuela.{' '}
             </p>
             <div className="infTex">
               <Link href={'tel:+507-3886501'}>

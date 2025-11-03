@@ -37,7 +37,7 @@ export const validEmail = ( email, requerido = true) => {
 
 
 
-  export const validNombre = (texto, requerido = false) => {
+  export const validNombre = (texto) => {
     // Creamos regex para no permitir caracteres invalidos
     const regexCaracteresInvalidos = new RegExp(/^[a-zA-Z _]*$/);
 

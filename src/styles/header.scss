@@ -14,7 +14,7 @@
     padding-left: fontVar.$em5;
     padding-right: 40px;
     padding-bottom: fontVar.$em4;
-    background-color: var(--colBlaHrk);
+    background-color: var(--thirdy);
     z-index: 45;
     height: auto;
 
@@ -39,7 +39,7 @@
             p {
                 font-family: 'popBold';
                 font-size: fontVar.$fs2;
-                color: var(--azuOscHrk);
+                color: var(--primary);
                 
             }
             
@@ -93,7 +93,7 @@
             p {
                 font-family: 'popBold';
                 font-size: fontVar.$fs2;
-                color: var(--azuOscHrk);
+                color: var(--primary);
                 
             }
             

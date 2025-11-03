@@ -8,21 +8,17 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#003889',
-        secondary: '#2867be',
-        'red-primary': '#8C0018',
-        'red-secondary': '#c91130',
-        thirdy: '#eee8e8'
+        primary: "#252525",
+        secondary: "#2867be",
+        orangePrimary: "#bf6e15",
+        orangeSecondary: "#eca457",
+        thirdy: "#eee8e8",
       },
       fontFamily: {
-        title: 'var(--popBlack)',
-        body: 'var(--popReg)',
+        title: "var(--popBlack)",
+        body: "var(--popReg)",
       },
-
     },
   },
-  plugins: [
-    require('tailwind-scrollbar'),
-  ],
+  plugins: [require("tailwind-scrollbar")],
 };
-

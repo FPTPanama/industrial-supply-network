@@ -1,569 +1,460 @@
-@use '_font-variables' as fontVar;
+@use "_font-variables" as fontVar;
 @import "./mixins.scss";
 
-.homeWrapper { 
+.homeWrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  font-family: popMed;
 
+  .homTitWra {
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100vw;
-    font-family: popMed;
+    height: 100vh;
 
-    
-    .homTitWra {
+    .homTitBox {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: fontVar.$fs7;
+      width: 100%;
+      height: 70%;
+      background-color: var(--orangePrimary);
 
+      .titBox {
         display: flex;
-        justify-content: center;    
-        align-items: center;
-        height: 100vh;
-        
-        .homTitBox {
-            
-            display: flex;
-            align-items: center;
-            justify-content: flex-start;
-            padding: fontVar.$fs7;
-            width: 100%;
-            height: 70%;
-            background-color: var(--azuOscHrk);
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        width: 50%;
+        z-index: 2;
 
-            .titBox {
-    
-                display: flex;
-                flex-direction: column;
-                justify-content: flex-start;
-                align-items: flex-start;
-                background-color: var(--azuOscHrk);
-                border-bottom: 1px solid var(--colBlaHrk);
-                width: 50%;
-                z-index: 2;
-    
-                h1 {
-        
-                    font-size: calc(fontVar.$fs6 * 2);
-                    line-height: calc(fontVar.$em2 * 1.6);
-                    color: var(--colBlaHrk);
-                }
-        
-                h2 {
-                    color: var(--colBlaHrk);
-                }
-    
-                .butTalYou {
-    
-                    display: flex;
-                    justify-content: center;
-                    align-items: center;
-                    height: 50px;
-                    padding-left: 2em;
-                    padding-right: 2em;
-                    background-color: var(--colBlaHrk);
-                    margin-bottom: 2em;
-                    border-radius: 25px;
-                    font-family: 'popBold';
-                    color: var(--azuOscHrk);
-                    font-size: fontVar.$fs2;
-
-                    &:hover {
-                        padding-left: 3em;
-                        padding-right: 3em;
-                        
-                    }
-                }
-    
-            }
-
-            .imgBox {
-
-                display: flex;
-                width: 50%;
-                
-            }
-
-
+        h1 {
+          font-size: calc(fontVar.$fs6 * 2);
+          line-height: calc(fontVar.$em2 * 1.6);
+          color: var(--primary);
         }
 
+        h2 {
+          color: var(--primary);
+          font-family: popMed;
+        }
 
+        .butTalYou {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 50px;
+          padding-left: 2em;
+          padding-right: 2em;
+          background-color: var(--primary);
+          margin-bottom: 2em;
+          border-radius: 25px;
+          font-family: "popBold";
+          color: white;
+          font-size: fontVar.$fs2;
+
+          &:hover {
+            padding-left: 3em;
+            padding-right: 3em;
+          }
+        }
+      }
+
+      .imgBox {
+        display: flex;
+        width: 50%;
+      }
+    }
+  }
+
+  .whyHrkBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: fontVar.$fs7;
+    width: 100%;
+    height: 500px;
+    color: var(--primary);
+    gap: fontVar.$em5;
+
+    .titBox {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      width: 50%;
     }
 
-    .whyHrkBox {
+    .infBox {
+      width: 50%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: fontVar.$em2;
 
+      .conImg {
         display: flex;
         justify-content: center;
         align-items: center;
-        padding: fontVar.$fs7;
-        width: 100%;
-        height: 500px;
-        color: var(--azuOscHrk);
-        gap: fontVar.$em5;
-
-        .titBox {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: flex-start;
-            width: 50%;
-        }
-
-        .infBox {
-
-            width: 50%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            gap: fontVar.$em2;
-
-            .conImg {
-                
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                width: auto;
-                height: 350px;
-                position: absolute;
-                left: 0px;
-                              
-                img {
-                    
-                    height: 100%;
-                    width: auto;
-                    z-index: 1;
-                        
-                }
-                    
-           
-                
-            }
-            
-        }
-
-    }
-
-    
-    .anyWraBox {
-        
-        display: flex;
-        width: 100%;
-        justify-content: space-around;
-        align-items: center;
-        height: 400px;
+        width: auto;
+        height: 350px;
+        position: absolute;
+        left: 0px;
 
         img {
-
-            width: auto;
-            height: 100%;
+          height: 100%;
+          width: auto;
+          z-index: 1;
         }
+      }
+    }
+  }
 
-        .splBox {
-    
-            display: flex;
-            width: 2px;
-            height: 50%;
-            background-color: var(--azuOscHrk);
-    
-        }
+  .anyWraBox {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    height: 400px;
+
+    img {
+      width: auto;
+      height: 100%;
     }
 
-    .ourProWraBox {
+    .splBox {
+      display: flex;
+      width: 2px;
+      height: 50%;
+      background-color: var(--primary);
+    }
+  }
 
+  .ourProWraBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: fontVar.$em5;
+    margin-bottom: fontVar.$em5;
+    margin-top: fontVar.$em5;
+    color: var(--primary);
+
+    h3 {
+      letter-spacing: fontVar.$em2;
+    }
+
+    .infBox {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      width: 100%;
+
+      .titBox {
+        width: 100%;
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
-        gap: fontVar.$em5;
+        align-items: start;
         margin-bottom: fontVar.$em5;
-        margin-top: fontVar.$em5;
-        color: var(--azuOscHrk);
 
-        h3 {
-
-            letter-spacing: fontVar.$em2;
-            
+        p {
+          max-width: 50%;
         }
-        
-        .infBox {
+      }
 
+      .imgWraBox {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        background-size: cover;
+        background-position-y: center;
+        width: 100%;
+        margin-top: fontVar.$em4;
+
+        .iteBox {
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+          width: 100%;
+          min-height: 300px;
+          background-color: var(--primary);
+          overflow: hidden;
+
+          .boxScr {
             display: flex;
             justify-content: center;
-            align-items: center;
-            flex-direction: column;
+            align-items: start;
+            position: relative;
+            left: 0px;
+            top: 0px;
             width: 100%;
+            height: 0px;
+            z-index: 20;
 
-            .titBox {
-
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: start;
-                margin-bottom: fontVar.$em5;
-                
-                p {
-                    max-width: 50%;
-                }
+            .iteBoxBac {
+              display: flex;
+              width: 100%;
+              height: 300px;
+              background-color: var(--primary);
+              opacity: 0.4;
+              z-index: 10;
             }
+          }
 
-            .imgWraBox {
+          button {
+            display: flex;
+            padding: fontVar.$em3;
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+            width: 100%;
+            color: white;
+            transition: all 0.3s ease-out;
+            background-size: 450px;
+            background-position: center;
 
-                display: grid;
-                grid-template-columns: 1fr 1fr 1fr;
-                background-size: cover;
-                background-position-y: center;
-                width: 100%;
-                margin-top: fontVar.$em4;
-
-                .iteBox {
-
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: center;
-                    align-items: center;
-                    width: 100%;
-                    min-height: 300px;
-                    background-color: var(--azuOscHrk);
-                    overflow: hidden;
-
-                    .boxScr {
-
-                        display: flex;
-                        justify-content: center;
-                        align-items: start;
-                        position: relative;
-                        left: 0px;
-                        top: 0px;
-                        width: 100%;
-                        height: 0px;
-                        z-index: 20;
-
-
-                        .iteBoxBac {
-                            display: flex;
-                            width: 100%;
-                            height: 300px;
-                            background-color: var(--azuOscHrk);
-                            opacity: 0.4;
-                            z-index: 10;
-    
-                        } 
-                        
-                    }
-                    
-                    
-                    button {
-                        
-                        display: flex;
-                        padding: fontVar.$em3;
-                        justify-content: center;
-                        align-items: center;
-                        height: 100%;
-                        width: 100%;
-                        color: white;
-                        transition: all .3s ease-out;
-                        background-size: 450px;
-                        background-position: center;
-                        
-                        p {
-                            font-family: popExtraBold;
-                            font-size: fontVar.$fs3;
-                            z-index: 20;
-                        }
-                        
-                    }
-                    
-                    button:hover {
-                        
-                        background-color: var(--azuOscHrk);
-                        color: white;
-                        border: none;
-                        transition: all .3s ease-out;
-                        
-                    }
-                }
-                
-                .iteBox:hover {
-                    font-size: calc(fontVar.$fs3 * 1.1);
-                    
-                    .boxScr {
-                        
-                        .iteBoxBac {
-
-                            opacity: 0.8;
-                        }
-                    }
-
-                    button {
-
-                        background-size: 480px;
-                    }
-                }
+            p {
+              font-family: popExtraBold;
+              font-size: fontVar.$fs3;
+              z-index: 20;
             }
+          }
 
+          button:hover {
+            background-color: var(--orangePrimary);
+            color: var(--primary);
+            border: none;
+            transition: all 0.3s ease-out;
+          }
         }
 
+        .iteBox:hover {
+          font-size: calc(fontVar.$fs3 * 1.1);
+
+          .boxScr {
+            .iteBoxBac {
+              opacity: 0.8;
+              background-color: var(--orangePrimary);
+            }
+          }
+
+          button {
+            background-size: 480px;
+          }
+        }
+      }
+    }
+  }
+
+  .whaCanWeDo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: fontVar.$em5;
+
+    h3 {
+      letter-spacing: fontVar.$em2;
     }
 
-    .whaCanWeDo {
+    .griWhaWra {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      background-size: cover;
+      background-position-y: center;
+      width: 100%;
 
+      .iteBox {
         display: flex;
         flex-direction: column;
-        align-items: center;
         justify-content: center;
-        gap: fontVar.$em5;
-
-        h3 {
-
-            letter-spacing: fontVar.$em2;
-            
-        }
-
-        .griWhaWra {
-
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr 1fr;
-            background-size: cover;
-            background-position-y: center;
-            width: 100%;
-
-            .iteBox {
-                
-
-                display: flex;
-                flex-direction: column;
-                justify-content: center;
-                align-items: center;
-                width: 100%;
-                min-height: 300px;
-                
-                button {
-                    
-                    display: flex;
-                    padding: fontVar.$em3;
-                    justify-content: center;
-                    align-items: center;
-                    height: 100%;
-                    width: 100%;
-                    color: var(--azuOscHrk);
-                    transition: all .3s ease-out;
-                    border-top: 2px solid var(--azuOscHrk);
-                    border-bottom: 2px solid var(--azuOscHrk);
-
-                    p {
-                        font-family: popExtraBold;
-                        font-size: fontVar.$fs3;
-                    }
-                    
-                    
-                }
-                
-                button:hover {
-                    
-                    background-color: var(--rojOscHrk);
-                    color: white;
-                    font-size: calc(fontVar.$fs3 * 1.1);
-                    border: none;
-                    transition: all .3s ease-out;
-                    
-  
-        
-                }
-            }
-            
-            
-        }
-    }
-
-    .numStats {
-
-        display: flex;
-        justify-content: space-between;
         align-items: center;
-        // grid-template-columns: 1fr 1fr 1fr;
-        gap: fontVar.$em5;
+        width: 100%;
+        min-height: 300px;
 
-        .iteNumBox {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: flex-start;
-            width: 100%;
+        button {
+          display: flex;
+          padding: fontVar.$em3;
+          justify-content: center;
+          align-items: center;
+          height: 100%;
+          width: 100%;
+          color: var(--primary);
+          transition: all 0.3s ease-out;
+          border-top: 2px solid var(--primary);
+          border-bottom: 2px solid var(--primary);
 
-            .titTex {
-
-                font-family: popBlack;
-            }
-            
-            p {
-                
-                // font-family: popBlack;
-
-                span {
-
-                    font-family: popLig;
-                }
-            }
+          p {
+            font-family: popExtraBold;
+            font-size: fontVar.$fs3;
+          }
         }
-    }
 
+        button:hover {
+          background-color: var(--orangePrimary);
+          color: white;
+          font-size: calc(fontVar.$fs3 * 1.1);
+          border: none;
+          transition: all 0.3s ease-out;
+        }
+      }
+    }
+  }
+
+  .numStats {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    // grid-template-columns: 1fr 1fr 1fr;
+    gap: fontVar.$em5;
+
+    .iteNumBox {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      width: 100%;
+
+      .titTex {
+        font-family: popBlack;
+      }
+
+      p {
+        // font-family: popBlack;
+
+        span {
+          font-family: popLig;
+        }
+      }
+    }
+  }
 }
 
 @include mobile {
+  .homeWrapper {
+    gap: fontVar.$em6;
 
-    .homeWrapper {
+    .homTitWra {
+      align-items: flex-start;
+      height: 60vh;
 
-        gap: fontVar.$em6;
+      .homTitBox {
+        flex-direction: column;
+        z-index: 2;
+        padding: fontVar.$em5;
+        height: 100%;
 
-        .homTitWra {
+        .titBox {
+          gap: fontVar.$em2;
+          width: 100%;
 
-            align-items: flex-start;
-            height: 60vh;
+          h1 {
+            font-size: fontVar.$fs6;
+          }
 
-            .homTitBox {
-
-                flex-direction: column;
-                z-index: 2;
-                padding: fontVar.$em5;
-                height: 100%;
-
-                .titBox {
-
-                    gap: fontVar.$em2;
-                    width: 100%;
-
-                    h1 {
-
-                        font-size: fontVar.$fs6;
-                    }
-
-                    h2 {
-
-                        width: 100%;
-                        font-size: fontVar.$fs3;
-                    }
-
-                    button {
-
-                        width: 100%;
-                        z-index: 2;
-                    }
-                }
-
-                .imgBox {
-
-                    width: 100%;
-                    height: 1px;
-
-                    img {
-
-                        position: relative;
-                        left: 10%;
-                        top: -60px;
-                        height: 300px;
-                        width: auto;
-                        z-index: 0;
-
-                    }
-                }
-
-
-            }
-        }
-
-        .whyHrkBox {
-
-            flex-direction: column;
+          h2 {
             width: 100%;
-            height: auto;
-            padding: 0px;
-            margin-top: calc(fontVar.$em5 * 1.6);
+            font-size: fontVar.$fs3;
+          }
 
-            .infBox {
-
-                order: 2;
-                width: 100%;
-                // height: 150px;
-
-                .conImg {
-
-                    height: 150px;
-                    left: -50px;
-                    display: none;
-                }
-            }
-
-            .titBox {
-
-                order: 1;
-                width: 100%;
-                z-index: 2;
-
-            }
-
+          button {
+            width: 100%;
+            z-index: 2;
+          }
         }
 
-        .ourProWraBox {
+        .imgBox {
+          width: 100%;
+          height: 1px;
 
-            .infBox {
-
-
-                .titBox {
-
-                    p {
-                        max-width: 100%;
-                
-                    }
-                }
-                .imgWraBox {
-    
-                    grid-template-columns: 1fr;
-                }
-            }
-
-
+          img {
+            position: relative;
+            left: 10%;
+            top: -60px;
+            height: 300px;
+            width: auto;
+            z-index: 0;
+          }
         }
-
-        .anyWraBox {
-
-            flex-direction: column;
-            // gap: fontVar.$em3;
-
-            img {
-
-                width: 80%;
-            }
-
-            .splBox {
-
-                display: none;
-            }
-        }
-
-        .whaCanWeDo {
-
-            .griWhaWra {
-
-                grid-template-columns: 1fr;
-
-                .iteBox {
-
-                    min-height: auto;
-
-                    button {
-
-                        border-bottom: 0px;
-                    }
-
-                }
-            }
-        }
-
-        .numStats {
-
-            flex-direction: column;
-        }
+      }
     }
 
+    .whyHrkBox {
+      flex-direction: column;
+      width: 100%;
+      height: auto;
+      padding: 0px;
+      margin-top: calc(fontVar.$em5 * 1.6);
 
+      .infBox {
+        order: 2;
+        width: 100%;
+        // height: 150px;
+
+        .conImg {
+          height: 150px;
+          left: -50px;
+          display: none;
+        }
+      }
+
+      .titBox {
+        order: 1;
+        width: 100%;
+        z-index: 2;
+      }
+    }
+
+    .ourProWraBox {
+      .infBox {
+        .titBox {
+          p {
+            max-width: 100%;
+          }
+        }
+        .imgWraBox {
+          grid-template-columns: 1fr;
+        }
+      }
+    }
+
+    .anyWraBox {
+      flex-direction: column;
+      // gap: fontVar.$em3;
+
+      img {
+        width: 80%;
+      }
+
+      .splBox {
+        display: none;
+      }
+    }
+
+    .whaCanWeDo {
+      .griWhaWra {
+        grid-template-columns: 1fr;
+
+        .iteBox {
+          min-height: auto;
+
+          button {
+            border-bottom: 0px;
+          }
+        }
+      }
+    }
+
+    .numStats {
+      flex-direction: column;
+    }
+  }
 }

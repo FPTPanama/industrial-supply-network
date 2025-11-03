@@ -2,9 +2,9 @@
 import React, { useState } from 'react'
 import Menu from './Menu'
 
-const MenuMobile = ({}) => {
+const MenuMobile = () => {
 
-    const [showMenu, setShowMenu] = useState(false);
+    const [showMenu] = useState(false);
 
   return (
 

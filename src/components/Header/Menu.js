@@ -8,7 +8,7 @@ import '../../styles/header.scss';
 import { isMobile } from 'react-device-detect';
 
 
-const Menu = ({pulse, setPulse, className = 'botBox'}) => {
+const Menu = ({ setPulse, className = 'botBox' }) => {
 
     const contactRef = useRef(null);
     const homeRef = useRef(null);

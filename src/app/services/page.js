@@ -1,10 +1,9 @@
-
-'use client';
-import GeneralLayout from '@/components/GeneralLayout/GeneralLayout'
-import classNames from 'classnames';
-import Image from 'next/image';
-import React, { useEffect, useRef } from 'react';
-import '../../styles/services.scss';
+"use client";
+import GeneralLayout from "@/components/GeneralLayout/GeneralLayout";
+import classNames from "classnames";
+import Image from "next/image";
+import React, { useEffect, useRef } from "react";
+import "../../styles/services.scss";
 import { RiAlarmWarningLine } from "react-icons/ri";
 import { AiOutlineWarning } from "react-icons/ai";
 import { FaCheckDouble } from "react-icons/fa";
@@ -27,21 +26,17 @@ import { PiShareNetworkBold } from "react-icons/pi";
 import { TbPigMoney } from "react-icons/tb";
 import { FiTarget } from "react-icons/fi";
 import { FiUmbrella } from "react-icons/fi";
-import Link from 'next/link';
-import Typed from 'typed.js';
-
-
-
+import Link from "next/link";
+import Typed from "typed.js";
 
 const Services = () => {
-
   const EVERYTHING = useRef(null);
 
   useEffect(() => {
     if (!EVERYTHING.current) return;
-    
-    const everything = new Typed( EVERYTHING.current, {
-      strings: ['ever^200ything.'],
+
+    const everything = new Typed(EVERYTHING.current, {
+      strings: ["ever^200ything."],
       typeSpeed: 100,
       loop: false,
       showCursor: false,
@@ -50,265 +45,290 @@ const Services = () => {
     return () => {
       everything.destroy();
     };
-  }, [])
-  
-
-
-
+  }, []);
 
   return (
-
     <GeneralLayout>
+      <div className={"servicesWrapper"}>
+        <section className={classNames("serTitWra")}>
+          <div className={classNames("infBox")}>
+            <h1>
+              Whatever task you require,<span> We handle</span>{" "}
+              <span
+                ref={EVERYTHING}
+                style={{ fontFamily: "popRare" }}
+                className={classNames("text-orangePrimary", "eveTex")}
+              />
+            </h1>
 
-      <div className={'servicesWrapper'}>
-
-        <section className={classNames('serTitWra')}>
-
-          <div className={classNames('infBox')}>
-
-            <h1>No matter what operation you need to do,<span> We take care of</span> <span ref={EVERYTHING} style={{ fontFamily: 'popRare' }} className={classNames('text-red-primary', 'eveTex')}/></h1>
-
-            <div className={classNames('butBox', 'transition-all')}>
-              <Link href={'/contact'} className={classNames('conBot','transition-all')}>Contact US</Link>
+            <div className={classNames("butBox", "transition-all")}>
+              <Link href={"/contact"} className={classNames("conBot", "transition-all")}>
+                Contact Us
+              </Link>
             </div>
-
           </div>
 
-          <div className={classNames('imgBox')}>
+          <div className={classNames("imgBox")}>
+            <div className={classNames("bluBox", "absolute", "w-64", "", "h-40")} />
 
-            <div className={classNames('bluBox', 'absolute', 'w-64', 'bg-primary', 'h-40')} />
-
-            <Image width={600} height={353} alt={'cargo'} src={'/img/hombre-almacen-trabajando_v2.webp'} className='mix-blend-multiply' />
-
+            <Image
+              width={600}
+              height={353}
+              alt={"cargo"}
+              src={"/img/hombre-almacen-trabajando_v2.webp"}
+              className="mix-blend-multiply"
+            />
           </div>
-
         </section>
 
-        <section className={classNames('tecAdvWra')}>
-
-          <div className={classNames('infBox')}>
-
-            <h3>Risk Management</h3>
+        <section className={classNames("tecAdvWra")}>
+          <div className={classNames("infBox")}>
+            <h3>Risk Mitigation</h3>
 
             <p>
-              In <span>HRK Global Trading</span> we understand that risk management it’s crucial to achieve our trading goals, it is because of this that the company implement tight internal control systems in order to <span> ensure that risk is significantly minimized or eliminated</span>.
+              At <span>HRK Global Trading</span> we recognize that risk mitigation is essential to
+              reach our business objectives, which is why the company enforces rigorous internal
+              control mechanisms to{" "}
+              <span> guarantee that risk is substantially reduced or removed</span>.
             </p>
-            <p><span>We take seriously our client’s safety</span> and that is why we develop contract terms which help to ensure our process and mitigate the commercial risk. In the same order We have structured a solid financial reputation hand in hand with banks and other financial institutions that allow us to <span>provide ideal solutions for our clients</span>.</p>
+            <p>
+              <span>We prioritize our client's security</span> and that is why we create contract
+              clauses which support our procedures and reduce the business risk. Similarly We have
+              built a strong financial standing together with banks and other financial entities
+              that enable us to <span>deliver optimal solutions for our clients</span>.
+            </p>
 
-            <div className={classNames('icoBox')}>
-
-              <RiAlarmWarningLine size={30} className={classNames('text-primary')} />
-              <AiOutlineWarning size={30} className={classNames('text-primary')} />
-              <FaCheckDouble size={25} className={classNames('text-primary')} />
-
+            <div className={classNames("icoBox")}>
+              <RiAlarmWarningLine size={30} className={classNames("text-primary")} />
+              <AiOutlineWarning size={30} className={classNames("text-primary")} />
+              <FaCheckDouble size={25} className={classNames("text-primary")} />
             </div>
-
           </div>
 
-          <div className={classNames('infBox')}>
-
-            <h3>Quality Control</h3>
+          <div className={classNames("infBox")}>
+            <h3>Quality Assurance</h3>
 
             <p>
-              At <span>HKR</span> one of our main pillars is <span>Quality Control</span>, we stand out in most of our businesses because we manage our processes hand in hand with our team of experts, taking control of areas such as:
+              At <span>HKR</span> one of our core foundations is <span>Quality Assurance</span>, we
+              excel in most of our operations because we coordinate our procedures alongside our
+              team of specialists, overseeing aspects including:
             </p>
-            <p><span>Weight control:</span> When trading raw materials, poor weight control leads to higher cost, that is why at <span>HRK Global</span> we make sure that the transportation of minerals corresponds according to our arrangements. <span>How do we do this?</span> Our team of professionals has developed a network with inspection companies that will certify the cargo.</p>
+            <p>
+              <span>Weight verification:</span> When dealing raw materials, inadequate weight
+              verification results in increased expenses, which is why at <span>HRK Global</span> we
+              ensure that the shipment of minerals aligns with our agreements.{" "}
+              <span>How is this achieved?</span> Our team of experts has established connections
+              with verification firms that will validate the shipment.
+            </p>
 
-            <div className={classNames('icoBox')}>
-
-              <HiOutlineClipboardCheck size={30} className={classNames('text-primary')} />
-              <GiWeight size={30} className={classNames('text-primary')} />
-              <IoSpeedometerOutline size={25} className={classNames('text-primary')} />
-
+            <div className={classNames("icoBox")}>
+              <HiOutlineClipboardCheck size={30} className={classNames("text-primary")} />
+              <GiWeight size={30} className={classNames("text-primary")} />
+              <IoSpeedometerOutline size={25} className={classNames("text-primary")} />
             </div>
-
           </div>
-          <div className={classNames('infBox')}>
-
-            <h3>Contract Negotiations</h3>
-
-            <p>
-              We provide expert advice on contract negotiations and analysis of terms, helping you avoid ‘hidden’ nuances. We have a voice of experience and reason <span>allowing appropriate and healthy solutions</span>. We enable you to remain in control of your own destiny, with <span>complete transparency guaranteed at all stages</span>.
-            </p>
-            <p>We also provide <span>de-risking of potential contract trouble-spots</span>.</p>
-            <p>We fully explain <span>Shipping and Charter Party terms (spot or C.O.A.)</span> and negotiate to ensure minimal differences between ship owner and off-taker.</p>
-
-            <div className={classNames('icoBox')}>
-
-              <FaBusinessTime size={30} className={classNames('text-primary')} />
-              <FaFileContract size={30} className={classNames('text-primary')} />
-              <GoLaw size={25} className={classNames('text-primary')} />
-
-            </div>
-
-          </div>
-
-          <div className={classNames('infBox')}>
-
-            <h3>Client Liaison</h3>
+          <div className={classNames("infBox")}>
+            <h3>Agreement Discussions</h3>
 
             <p>
-              <span>We know how important relationships are</span>. We act in accordance with your company’s values and are confident that <span>We can further enhance and expand your global network</span> opening up new and exciting opportunities. All logistics staff will interact and visit regularly <span>to ensure total client satisfaction</span>, confidence and team work.
+              We offer professional guidance on agreement discussions and examination of clauses,
+              assisting you to bypass 'concealed' details. We bring expertise and logic{" "}
+              <span>enabling suitable and beneficial solutions</span>. We allow you to stay in
+              command of your own future, with{" "}
+              <span>full openness ensured throughout every phase</span>.
+            </p>
+            <p>
+              We also offer <span>risk reduction of possible agreement problem areas</span>.
+            </p>
+            <p>
+              We thoroughly describe{" "}
+              <span>Transportation and Charter Party clauses (spot or C.O.A.)</span> and discuss to
+              guarantee reduced discrepancies between vessel owner and buyer.
             </p>
 
-
-            <div className={classNames('icoBox')}>
-
-              <BiCart size={30} className={classNames('text-primary')} />
-              <BiCommentDetail size={30} className={classNames('text-primary')} />
-              <BiSolidPlaneAlt size={25} className={classNames('text-primary')} />
-
+            <div className={classNames("icoBox")}>
+              <FaBusinessTime size={30} className={classNames("text-primary")} />
+              <FaFileContract size={30} className={classNames("text-primary")} />
+              <GoLaw size={25} className={classNames("text-primary")} />
             </div>
-
           </div>
 
-          <div className={classNames('infBox')}>
-
-            <h3>Problem Solving</h3>
+          <div className={classNames("infBox")}>
+            <h3>Customer Relations</h3>
 
             <p>
-              We have over <span>20 years’ experience in problem solving</span> and provide <span>pragmatic solutions</span>. Our experienced team can deal with legal claims, shipping issues/liabilities and guidance with a choice of marine lawyers. <span>Expert advice</span> is given on possible future issues with current contracts and strategies for avoiding renegotiating problems.
+              <span>We recognize how vital connections are</span>. We operate aligned with your
+              organization's principles and are certain that{" "}
+              <span>We can additionally strengthen and grow your international network</span>{" "}
+              creating fresh and promising possibilities. All operations personnel will communicate
+              and meet frequently <span>to guarantee complete customer contentment</span>, trust and
+              collaboration.
             </p>
 
-
-            <div className={classNames('icoBox')}>
-
-              <BiSolidExtension size={30} className={classNames('text-primary')} />
-              <AiFillMedicineBox size={30} className={classNames('text-primary')} />
-              <LuShip size={25} className={classNames('text-primary')} />
-
+            <div className={classNames("icoBox")}>
+              <BiCart size={30} className={classNames("text-primary")} />
+              <BiCommentDetail size={30} className={classNames("text-primary")} />
+              <BiSolidPlaneAlt size={25} className={classNames("text-primary")} />
             </div>
-
           </div>
 
-          <div className={classNames('infBox')}>
-
-            <h3>Negotiations</h3>
-
-            <p>
-              We provide <span>analysis and review of contracts</span> and issues arising during contract execution.
-            </p>
+          <div className={classNames("infBox")}>
+            <h3>Issue Resolution</h3>
 
             <p>
-              We also <span>help to set the stage for future negotiations with potential buyers</span> and make recommendations on terms and reliability of counter parties.
+              We possess over <span>20 years' expertise in issue resolution</span> and deliver{" "}
+              <span>practical solutions</span>. Our skilled team can handle legal disputes,
+              transportation matters/obligations and assistance with a selection of maritime
+              attorneys. <span>Specialist guidance</span> is provided on potential upcoming concerns
+              with existing agreements and approaches for preventing renegotiation difficulties.
             </p>
 
-
-            <div className={classNames('icoBox')}>
-
-              <TbPigMoney size={30} className={classNames('text-primary')} />
-              <FiTarget size={30} className={classNames('text-primary')} />
-              <FiUmbrella size={25} className={classNames('text-primary')} />
-
+            <div className={classNames("icoBox")}>
+              <BiSolidExtension size={30} className={classNames("text-primary")} />
+              <AiFillMedicineBox size={30} className={classNames("text-primary")} />
+              <LuShip size={25} className={classNames("text-primary")} />
             </div>
-
           </div>
 
-          <div className={classNames('infBox')}>
-
-            <h3>Market Analysis</h3>
+          <div className={classNames("infBox")}>
+            <h3>Discussions</h3>
 
             <p>
-              With constant interaction in the worldwide markets and years of data and research, <span>We are proud of our information flow</span>. <span>Clients will be advised of weekly events</span> by bulletins highlighting market developments and trends, with instant alerts on relevant issues.
+              We offer <span>examination and assessment of agreements</span> and problems occurring
+              during agreement implementation.
             </p>
 
+            <p>
+              We additionally{" "}
+              <span>assist in preparing for upcoming discussions with prospective purchasers</span>{" "}
+              and provide suggestions on clauses and trustworthiness of counterparties.
+            </p>
 
-            <div className={classNames('icoBox')}>
-
-              <IoBarChart size={30} className={classNames('text-primary')} />
-              <TbDeviceAnalytics size={30} className={classNames('text-primary')} />
-              <FaInfoCircle size={25} className={classNames('text-primary')} />
-
+            <div className={classNames("icoBox")}>
+              <TbPigMoney size={30} className={classNames("text-primary")} />
+              <FiTarget size={30} className={classNames("text-primary")} />
+              <FiUmbrella size={25} className={classNames("text-primary")} />
             </div>
-
           </div>
 
-          <div className={classNames('infBox')}>
+          <div className={classNames("infBox")}>
+            <h3>Market Research</h3>
 
+            <p>
+              Through ongoing engagement in the global markets and years of information and studies,{" "}
+              <span>We take pride in our data stream</span>.{" "}
+              <span>Customers will be informed of weekly updates</span> through reports emphasizing
+              market changes and patterns, with immediate notifications on pertinent matters.
+            </p>
+
+            <div className={classNames("icoBox")}>
+              <IoBarChart size={30} className={classNames("text-primary")} />
+              <TbDeviceAnalytics size={30} className={classNames("text-primary")} />
+              <FaInfoCircle size={25} className={classNames("text-primary")} />
+            </div>
+          </div>
+
+          <div className={classNames("infBox")}>
             <h3>Insurance</h3>
 
             <p>
-              <span>We can negotiate suitable insurance policies for cargoes</span> and present an array of offers for you to choose from.
+              <span>We can arrange appropriate insurance coverage for shipments</span> and display a
+              range of options for you to select from.
             </p>
 
             <p>
-              We provide <span>help and experience on making insurance claims</span>, collecting of documentation and liaison with underwriters and loss-assessors.
+              We supply <span>assistance and expertise on filing insurance claims</span>, gathering
+              of paperwork and communication with insurers and damage evaluators.
             </p>
 
-
-            <div className={classNames('icoBox')}>
-
-              <FaHandsHelping size={30} className={classNames('text-primary')} />
-              <BiSolidHelpCircle size={30} className={classNames('text-primary')} />
-              <FaInfoCircle size={25} className={classNames('text-primary')} />
-
+            <div className={classNames("icoBox")}>
+              <FaHandsHelping size={30} className={classNames("text-primary")} />
+              <BiSolidHelpCircle size={30} className={classNames("text-primary")} />
+              <FaInfoCircle size={25} className={classNames("text-primary")} />
             </div>
-
           </div>
 
-          <div className={classNames('infBox')}>
-
-            <h3>Shipping Strategy</h3>
+          <div className={classNames("infBox")}>
+            <h3>Transportation Strategy</h3>
 
             <p>
-              <span>HRK Global Trading</span> works along with a <span>great network of chartering companies</span> in order to ensure all shipping needs.
+              <span>HRK Global Trading</span> collaborates with a{" "}
+              <span>extensive network of chartering firms</span> to guarantee all transportation
+              requirements.
             </p>
 
-
-            <div className={classNames('icoBox')}>
-
-              <PiStrategyBold size={30} className={classNames('text-primary')} />
-              <TbNetwork size={30} className={classNames('text-primary')} />
-              <PiShareNetworkBold size={25} className={classNames('text-primary')} />
-
+            <div className={classNames("icoBox")}>
+              <PiStrategyBold size={30} className={classNames("text-primary")} />
+              <TbNetwork size={30} className={classNames("text-primary")} />
+              <PiShareNetworkBold size={25} className={classNames("text-primary")} />
             </div>
-
           </div>
-
         </section>
 
-        <section className={classNames('serIncWra')}>
-
-          <div className={classNames('serBox', 'items-end', 'text-right')}>
-
-            <h3>Services include</h3>
+        <section className={classNames("serIncWra")}>
+          <div className={classNames("serBox", "items-end", "text-right")}>
+            <h3>Services comprise</h3>
 
             <ul>
-              <li><span>Desktop route</span> evaluation</li>
-              <li><span>Review of sales terms</span> – ensuring commercial protection</li>
-              <li>Vetting of proposed vessels for <span>suitability</span> and <span>safety</span></li>
-              <li><span>Matrix analysis</span> to complement marketing activities – negotiation and advice on freight parities</li>
-              <li><span>Fixed</span> and <span>floating</span> price freight cover</li>
-              <li><span>Negotiation</span> and <span>advice</span> on stevedoring contracts</li>
-              <li><span>Strong relationships</span> with local ship owners</li>
+              <li>
+                <span>Route planning</span> assessment
+              </li>
+              <li>
+                <span>Examination of sales clauses</span> – securing business safeguards
+              </li>
+              <li>
+                Inspection of suggested ships for <span>appropriateness</span> and{" "}
+                <span>security</span>
+              </li>
+              <li>
+                <span>Comparative analysis</span> to support sales efforts – discussion and guidance
+                on shipping rates
+              </li>
+              <li>
+                <span>Locked</span> and <span>variable</span> price transportation coverage
+              </li>
+              <li>
+                <span>Discussion</span> and <span>counsel</span> on port handling agreements
+              </li>
+              <li>
+                <span>Solid partnerships</span> with regional vessel owners
+              </li>
             </ul>
-
           </div>
 
           <div className={classNames("serBox")}>
-
-            <h3>Management Control</h3>
+            <h3>Administrative Oversight</h3>
             <ul>
-              <li><span>Regular visits to our clients</span>, for updating and management discussions </li>
-              <li><span>English</span> and <span>Spanish</span> speaking staff</li>
-              <li><span>Total management control</span> of all decision-making processes </li>
-              <li>Full and <span>constant exposure</span> to worldwide relationships </li>
-              <li>Copies of all email correspondence and <span>daily/weekly status updates</span> </li>
+              <li>
+                <span>Frequent meetings with our customers</span>, for information sharing and
+                executive talks{" "}
+              </li>
+              <li>
+                <span>Bilingual</span> <span>English</span> and <span>Spanish</span> personnel
+              </li>
+              <li>
+                <span>Complete administrative oversight</span> of all choice-making procedures{" "}
+              </li>
+              <li>
+                Complete and <span>ongoing access</span> to international connections{" "}
+              </li>
+              <li>
+                Records of all electronic communications and{" "}
+                <span>daily/weekly progress reports</span>{" "}
+              </li>
               <li>Top class reporting structures </li>
-              <li><span>Auditors</span> or accountants <span>are welcome at our head office</span></li>
-
+              <li>
+                <span>Inspectors</span> or financial experts{" "}
+                <span>are invited to our main office</span>
+              </li>
             </ul>
           </div>
-
-
         </section>
-
       </div>
-
     </GeneralLayout>
-  )
-}
+  );
+};
 
-export default Services
+export default Services;
 
-export const dynamic = 'force-dynamic'
+export const dynamic = "force-dynamic";

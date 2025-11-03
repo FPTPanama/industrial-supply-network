@@ -16,9 +16,6 @@ const FormHrk = () => {
   const [email, setEmail] = useState(null);
   const [showModal, setShowModal] = useState(false);
   const [loadingResponse, setLoadingResponse] = useState(false);
-  const [showErrorEmail, setshowErrorEmail] = useState(false);
-  const [showErrorName, setShowErrorName] = useState(false);
-  const [showErrorPhone, setShowErrorPhone] = useState(false);
 
   const emailError = validEmail(email);
   const nameError = validNombre(nombre);
@@ -56,9 +53,7 @@ const FormHrk = () => {
       }
 
     } catch (error) {
-
-      console.log(error)
-
+      // Error handling - could be logged to error tracking service
     }
 
 
@@ -78,15 +73,15 @@ const FormHrk = () => {
         {
           loadingResponse ?
 
-            <p className={classNames('text-white', 'text-5xl', 'slide-fwd-center')}>Sending your contact</p>
+            <p className={classNames('text-white', 'text-5xl', 'slide-fwd-center')}>Submitting your inquiry</p>
 
             :
 
             <div className={classNames('flex', 'flex-col', 'md:w-1/2', 'w-full', 'h-1/2', 'border-white', 'rounded-3xl', 'p-5', 'justify-center', 'items-center', 'gap-4', 'slide-fwd-center')}>
               <MdOutlineMarkEmailRead size={400} color='white' />
               <div className={classNames('flex', 'flex-col', 'w-9/12', 'h-fit', 'md:items-center', 'md:justify-center')}>
-                <p style={{ fontFamily: 'popBold' }} className={classNames('text-white', 'md:text-5xl', 'text-3xl', 'font-bold')}>Thanks for your message.</p>
-                <p style={{ fontFamily: 'popThin' }} className={classNames('text-white', 'md:text-5xl', 'text-3xl')}> We will contact to you soon.</p>
+                <p style={{ fontFamily: 'popBold' }} className={classNames('text-white', 'md:text-5xl', 'text-3xl', 'font-bold')}>Thank you for reaching out.</p>
+                <p style={{ fontFamily: 'popThin' }} className={classNames('text-white', 'md:text-5xl', 'text-3xl')}> We will reach out to you shortly.</p>
               </div>
 
               <button onClick={() => setShowModal(false)} className={classNames('text-white', 'border-white', 'border-2', 'h-40', 'px-24', 'rounded-2xl', 'hover:text-xl', 'hover:px-28', 'transition-all')}>Done</button>
@@ -140,7 +135,6 @@ const FormHrk = () => {
             type="email"
             onChange={(e) => {
               setEmail(e.target.value);
-              setshowErrorEmail(!emailError.ok)
             }}
           />
 
@@ -167,7 +161,6 @@ const FormHrk = () => {
             }
             onChange={(e) => {
               setPhone(e.target.value);
-              setShowErrorPhone(!phoneError.ok)
             }}
           />
          <div className='h-2'>

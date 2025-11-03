@@ -1,7 +1,6 @@
 'use client'
 
-import React, {useRef, useState} from 'react';
-import ModalMenu from './ModalMenu';
+import React, { useState } from 'react';
 import classNames from 'classnames';
 import Menu from './Menu';
 
