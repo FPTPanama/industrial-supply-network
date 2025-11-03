@@ -1,0 +1,135 @@
+@use '_font-variables' as fontVar;
+@import "./mixins.scss";
+
+.contactWrapper {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: popMed;
+    height: 100vh;
+
+    .conWraBox {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        gap: fontVar.$em4;
+
+        .infBox {
+
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-end;
+            font-size: fontVar.$fs3;
+            color: var(--azuOscHrk);
+            text-align: right;
+    
+            p {
+    
+                span {
+    
+                    font-family: 'popBlack';
+                }
+            }
+    
+            .infTex {
+    
+                display: flex;
+                flex-direction: column;
+                margin-top: fontVar.$em4;
+    
+                .telLink {
+    
+                    font-family: popBlack;
+                    font-size: fontVar.$fs4;
+                }
+    
+                .emailLink {
+    
+                    font-size: fontVar.$fs2;
+                }
+            }
+
+            .imgBox {
+                width: 100%;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+            }
+        }
+
+    }
+    
+
+
+
+
+
+}
+
+@include mobile {
+
+   .contactWrapper {
+
+    flex-direction: column;
+    gap: fontVar.$em5;
+    height: 100%;
+
+    .conWraBox {
+
+        flex-direction: column;
+        gap: fontVar.$em5;
+        
+        .infBox {
+            
+            width: 100%;
+            text-align: left;
+            align-items: flex-start;
+            gap: fontVar.$em4;
+
+            .infTex {
+
+                margin-top: 0px;
+            }
+
+            .imgBox {
+
+                justify-content: flex-start;
+            }
+
+        }
+
+    }
+
+    .imgBox {
+
+        width: 100%;
+        justify-content: flex-start;
+
+        img {
+
+            width: 50%;
+        }
+    }
+
+    .infBox {
+
+        width: 100%;
+        justify-content: flex-start;
+        gap: fontVar.$em4;
+
+        .imgBox {
+
+            img {
+
+                height: 100%;
+            
+            }
+        }
+    }
+   }
+}

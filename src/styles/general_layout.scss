@@ -1,0 +1,54 @@
+@use '_font-variables' as fontVar;
+@import "./mixins.scss";
+
+.tagBox {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    width: 2%;
+    border: none;
+    z-index: 90;
+    cursor: pointer;
+    transition: all .05s ease-out;
+    padding: 0px;
+    font-family: popThin;
+
+    .canTex {
+
+        font-family: popBlack;
+    }
+
+    &:hover {
+
+        width: 300px;
+
+    }
+}
+
+.rojBox {
+    background-color: var(--rojOscHrk);
+    top: 15%;
+    right: 0px;
+    height: 30%;
+
+
+}
+
+.azuBox {
+    background-color: var(--azuOscHrk);
+    top: 45%;
+    right: 0px;
+    height: 40%;
+}
+
+@include mobile {
+
+    .tagBox {
+
+        display: none;
+    }
+
+}

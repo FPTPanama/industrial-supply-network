@@ -1,0 +1,40 @@
+{
+  "name": "industrial-supply-network",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\"",
+    "format:check": "prettier --check \"**/*.{js,jsx,ts,tsx,json,css,scss,md}\""
+  },
+  "dependencies": {
+    "@emailjs/browser": "^4.4.1",
+    "antd": "^5.20.0",
+    "classnames": "^2.5.1",
+    "dayjs": "^1.11.13",
+    "gsap": "^3.12.5",
+    "next": "14.2.25",
+    "react": "^18",
+    "react-device-detect": "^2.2.3",
+    "react-dom": "^18",
+    "react-icons": "^5.2.1",
+    "react-intersection-observer": "^9.13.1",
+    "sass": "^1.77.1",
+    "tailwind-scrollbar": "^3.1.0",
+    "typed-js": "^0.2.3",
+    "typed.js": "^2.1.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.4.20",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.25",
+    "postcss": "^8",
+    "prettier": "3.3.3",
+    "sass": "^1.77.1",
+    "tailwindcss": "^3.4.1"
+  }
+}
+

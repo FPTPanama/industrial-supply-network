@@ -1,0 +1,50 @@
+@use '_font-variables' as fontVar;
+
+.redSocBox {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    gap: fontVar.$em3;
+
+    p {
+        span {
+
+            font-family: popBlack;
+        }
+    }
+    
+    
+    .botWra {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: fontVar.$em5;
+
+
+        .botBox {
+            
+            width: 40px;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            button {
+
+                width: 60%;
+
+                &:hover {
+
+                    width: 80%;
+                }
+            }
+
+        }
+
+    }
+    
+}

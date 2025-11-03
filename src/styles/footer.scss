@@ -1,0 +1,90 @@
+@use '_font-variables' as fontVar;
+@import "./mixins.scss";
+
+.footerWrapper {
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: fontVar.$em4;
+    font-family: popReg;
+    color: var(--azuOscHrk);
+    margin-top: fontVar.$em6;
+    margin-bottom: fontVar.$em4;
+
+    .ofiBox {
+
+        display: flex;
+        width: 100%;
+        gap: fontVar.$em3;
+
+
+        .imgBox {
+    
+            width: 50%;
+            height: auto;
+    
+            img {
+    
+                width: 100%;
+                height: auto;
+            }
+            
+        }
+    
+        .infBox {
+    
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 50%;
+            height: auto;
+            border-left: 2px solid var(--azuOscHrk);
+            padding: fontVar.$em3;
+
+            span {
+
+                font-family: popBlack;
+            }
+            
+    
+        }
+
+
+    }
+
+    .addBox {
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 100%;
+        padding: fontVar.$em3;
+        border-right: 2px solid var(--azuOscHrk);
+
+        .titTex {
+
+            font-family: popBlack;
+        }
+
+    }
+
+
+
+}
+
+@include mobile {
+
+    .footerWrapper {
+
+        grid-template-columns: 1fr;
+        margin-top: 100px;
+        
+        .addBox {
+
+            border: none;
+            border-top: 2px solid var(--azuOscHrk);
+        }
+    
+    }
+}

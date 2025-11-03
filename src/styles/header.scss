@@ -1,0 +1,173 @@
+@use '_font-variables' as fontVar;
+@import "./mixins.scss";
+
+.headerWrapper {
+
+    width: 100vw;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: fontVar.$em4;
+    padding-left: fontVar.$em5;
+    padding-right: 40px;
+    padding-bottom: fontVar.$em4;
+    background-color: var(--colBlaHrk);
+    z-index: 45;
+    height: auto;
+
+    .botBox {
+
+        display: none;
+        justify-content: center;
+        align-items: center;
+        gap: fontVar.$em5;
+        
+
+        a {
+
+            width: 100px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            
+            p {
+                font-family: 'popBold';
+                font-size: fontVar.$fs2;
+                color: var(--azuOscHrk);
+                
+            }
+            
+            .linBox {
+                
+                display: flex;
+                width: 100%;
+                height: 2px;
+                transform: scaleX(0);
+            }
+            
+            
+            &:hover {
+
+                p {
+                    font-size: calc(fontVar.$fs2 * 1.1);
+
+                }
+
+
+                .linBox {
+
+                    transform: scaleX(1);
+                }
+            }
+        }
+
+    
+
+        
+    }
+
+    .desBotBox {
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: fontVar.$em5;
+        
+
+        a {
+
+            width: 100px;
+            height: 30px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+
+            
+            p {
+                font-family: 'popBold';
+                font-size: fontVar.$fs2;
+                color: var(--azuOscHrk);
+                
+            }
+            
+            .linBox {
+                
+                display: flex;
+                width: 100%;
+                height: 2px;
+                transform: scaleX(0);
+            }
+            
+            
+            &:hover {
+
+                p {
+                    font-size: calc(fontVar.$fs2 * 1.1);
+
+                }
+
+
+                .linBox {
+
+                    transform: scaleX(1);
+                }
+            }
+        }
+
+    
+
+        
+    }
+}
+
+@include mobile {
+
+    .headerWrapper {
+
+        padding-left: fontVar.$em4;
+        padding-right: fontVar.$em4;
+        height: 100px;
+        
+        img {
+            
+            height: 45px;
+            width: auto;
+            padding: 0px;
+            
+        }
+
+        .botBox {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            align-items: flex-end;
+            background-color: transparent;
+            position: absolute;
+            padding: fontVar.$em4;
+            top: 100px;
+            left: 0px;
+            gap: fontVar.$em3;
+            width: 100%;
+            // height: 300px;
+            z-index: 30;
+
+            a {
+
+                width: auto;
+            }
+        }
+
+        .desBotBox {
+
+            display: none;
+        }
+    }
+}

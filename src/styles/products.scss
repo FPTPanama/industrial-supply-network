@@ -1,0 +1,133 @@
+@use '_font-variables' as fontVar;
+@import "./mixins.scss";
+
+.productsWrapper {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    height: calc(100vh - 100px);
+    margin-top: 100px;
+
+
+    .layGenPro {
+
+        display: flex;
+        width: 100%;
+        align-items: center;
+        height: 100%;
+        gap: calc(fontVar.$em6 * 0.4);
+        
+        .menBox {
+            
+            display: flex;
+            width: auto;
+            border-right: 2px solid var(--azuOscHrk);
+            padding: fontVar.$em4;
+            height: 70%;
+            box-sizing: content-box;
+
+            // Estilos para el Menu de Ant Design
+            .ant-menu {
+                background: transparent !important;
+                border: none !important;
+                width: 100%;
+            }
+
+            .ant-menu-item {
+                margin: fontVar.$em2 0 !important;
+                padding: fontVar.$em2 fontVar.$em3 !important;
+                border-radius: 4px;
+                transition: all 0.3s ease;
+                
+                &:hover {
+                    background-color: rgba(0, 56, 137, 0.1) !important;
+                }
+
+                &.ant-menu-item-selected {
+                    background-color: var(--azuOscHrk) !important;
+                    color: #eee8e8 !important;
+                    
+                    &::after {
+                        display: none;
+                    }
+                }
+
+                .ant-menu-title-content {
+                    display: flex;
+                    align-items: center;
+                    gap: fontVar.$em2;
+                    font-family: popBlack;
+                    color: var(--azuOscHrk);
+                }
+            }
+
+            .ant-menu-item-selected .ant-menu-title-content {
+                color: #eee8e8 !important;
+            }
+
+            .ant-menu-item-icon {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+        }
+
+        .conBox {
+
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            height: 100%;
+            overflow: hidden;
+
+            .titBox {
+
+                .titTex {
+
+                    font-family: popBlack;
+                    font-size: fontVar.$fs4;
+                    color: var(--azuOscHrk);
+                }
+            }
+
+            .griProWra {
+
+                columns: 3;
+                margin-bottom: fontVar.$em3;
+                -moz-box-direction: normal;
+                overflow-y: scroll;
+                padding-right: fontVar.$em3;
+                
+            }
+        }
+    }
+    
+}
+
+@include mobile {
+
+    .productsWrapper {
+
+        margin-top: 0px;
+        
+        .layGenPro {
+
+            flex-direction: column;
+
+            .conBox {
+
+                overflow-y: scroll;
+
+                .griProWra {
+    
+                    columns: 1;
+                    height: auto;
+                    overflow: unset;
+                    
+                }
+            }
+        }
+    }
+}

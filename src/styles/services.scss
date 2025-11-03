@@ -1,0 +1,297 @@
+@use '_font-variables' as fontVar;
+@import "./mixins.scss";
+
+
+.servicesWrapper {
+
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    // min-height: 700px;
+    margin-top: 100px;
+    gap: fontVar.$em6;
+    
+    .serTitWra {
+        
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        height: calc(100vh - 100px);
+        
+        .infBox {
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: start;
+            width: 50%;
+
+            h1 {
+                font-family: popBlack;
+                color: var(--azuOscHrk);
+
+                .eveTex {
+
+                    font-size: fontVar.$fs5;
+                }
+
+                span {
+
+                    font-family: popReg;
+                }
+
+                .eveTex {
+
+                    font-size: fontVar.$fs4;
+                }
+            }
+
+            .butBox {
+
+                display: flex;
+                justify-content: flex-start;
+                align-items: center;
+                min-width: 300px;
+                margin-top: fontVar.$em4;
+                transition: .5seg ease-in-out;
+                
+                .conBot {
+                    
+                    all: unset;
+                    padding-left: fontVar.$em5;
+                    padding-right: fontVar.$em5;
+                    padding-bottom: fontVar.$em2;
+                    padding-top: fontVar.$em2;
+                    width: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    border: 2px solid var(--azuOscHrk);
+                    font-family: popBlack;
+                    font-size: calc(fontVar.$fs3);
+                    cursor: pointer;
+                    background-color: var(--colBlaHrk);
+                    color: var(--azuOscHrk);
+                    transition: .1s ease-in-out;
+                    border-radius: 25px;
+
+                    &:hover {
+
+                        width: 100%;
+                    }
+                 
+                }
+
+            }
+
+        }
+
+        .imgBox {
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 50%;
+
+
+            .bluBox {
+
+                position: absolute;
+                width: calc(100vw / 2);
+                height: 400px;
+                opacity: .8;
+                background: rgb(9,9,121);
+                background: linear-gradient(90deg, rgba(0, 56, 137,1) 0%, rgb(36, 69, 111) 100%);
+                right: -50px;
+
+            }
+
+            img {
+
+                height: 600px;
+                width: auto;
+                // position: relative;
+
+
+            }
+        }
+    }
+
+    .tecAdvWra {
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        width: 100%;
+        height: 100%;
+        gap: calc(fontVar.$em6);
+
+        
+        .infBox {
+            
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            gap: fontVar.$em2;
+            width: 100%;
+
+            h3 {
+                font-family: popBlack;
+                margin-bottom: fontVar.$em2;
+                font-size: calc(fontVar.$fs4 * 1.3);
+                color: var(--azuOscHrk);
+                line-height: fontVar.$em3;
+            }
+
+            p {
+
+                font-family: popReg;
+                color: var(--azuOscHrk);
+
+                span {
+
+                    font-family: popBlack;
+                }
+            }
+        }
+
+        .icoBox {
+
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            gap: fontVar.$em3;
+            width: 100%;
+            margin-top: fontVar.$em3;
+
+        }
+
+    }
+
+    .serIncWra {
+
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        gap: fontVar.$em3;
+        
+        .serBox {
+            
+            display: flex;
+            flex-direction: column;
+            width: 50%;
+            height: 100%;
+            padding: calc(fontVar.$em3 * 2);
+            border-top-left-radius: 10%;
+
+            h3 {
+                font-family: popBlack;
+                color: var(--azuOscHrk);
+                font-size: fontVar.$fs4;
+                color: var(--azuOscHrk);
+                margin-bottom: fontVar.$em3;
+
+            }
+
+            ul {
+
+                li {
+
+                    list-style-type: none;
+                    color: var(--azuOscHrk);
+                    font-family: popReg;
+                    margin-bottom: fontVar.$em3;
+
+                    span {
+
+                        font-family: popBlack;
+                    }
+                    
+                }
+            }
+        }
+    }
+
+}
+
+@include mobile {
+    .servicesWrapper {
+
+        margin-top: 0px;
+        
+        .serTitWra {
+            
+            flex-direction: column;
+            width: 100%;
+            height: auto;
+
+            .infBox {
+
+                order: 2;
+                width: 100%;
+
+                h1 {
+
+                    .eveTex {
+
+                        font-size: calc(fontVar.$fs4 * 1.2);
+                    }
+                }
+
+                .butBox {
+
+                    width: 100%;
+                    
+                    button {
+
+                        width: 100%;
+                    }
+                }
+
+            }
+
+            .imgBox {
+
+                order: 1;
+                width: 100%;
+                height: 300px;
+
+                img {
+
+                    height: 100%;
+                    width: auto;
+                }
+
+                .bluBox {
+
+                    height: 200px;
+                    right: -20px;
+                    width: 300px;
+                }
+            }
+        }
+
+        .tecAdvWra {
+
+            grid-template-columns: 1fr;
+            gap: calc(fontVar.$em5 * 2 );
+        }
+
+        .serIncWra {
+
+            flex-direction: column;
+
+            .serBox {
+
+                width: 100%;
+                text-align: left;
+                align-items: flex-start;
+                padding: 0px;
+            }
+        }
+
+    }
+
+}
