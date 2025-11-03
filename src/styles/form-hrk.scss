@@ -30,7 +30,7 @@
             
             label {
     
-                // color: var(--azuOscHrk);
+                // color: var(--primary);
                 font-family: popBold;
             }
     
@@ -39,10 +39,10 @@
                 font-size: fontVar.$fs1;
                 width: 100%;
                 border-radius: 15px;
-                // border: 2px solid var(--azuOscHrk);
+                // border: 2px solid var(--primary);
                 background-color: transparent;
                 padding: calc(fontVar.$em3);
-                // color: var(--azuOscHrk);
+                // color: var(--primary);
                 font-size: fontVar.$fs2;
     
                 &:focus {
@@ -70,8 +70,8 @@
             padding: fontVar.$em3;
             width: 100%;
             box-sizing: border-box;
-            // background-color: var(--azuOscHrk);
-            // color: var(--azuOscHrk);
+            // background-color: var(--primary);
+            // color: var(--primary);
             border-radius: 15px;
             cursor: pointer;
             height: 90%;

@@ -1,69 +1,57 @@
 @font-face {
-	font-family: "popBlack";
-	src: url("/fonts/pop_black.ttf");
+  font-family: "popBlack";
+  src: url("/fonts/pop_black.ttf");
 }
 @font-face {
-	font-family: "popBold";
-	src: url("/fonts/pop_bold.ttf");
+  font-family: "popBold";
+  src: url("/fonts/pop_bold.ttf");
 }
 @font-face {
-	font-family: "popExtraBold";
-	src: url("/fonts/pop_extrabold.ttf");
+  font-family: "popExtraBold";
+  src: url("/fonts/pop_extrabold.ttf");
 }
 @font-face {
-	font-family: "popExtLig";
-	src: url("/fonts/pop_extralight.ttf");
+  font-family: "popExtLig";
+  src: url("/fonts/pop_extralight.ttf");
 }
 @font-face {
-	font-family: "popLig";
-	src: url("/fonts/pop_light.ttf");
+  font-family: "popLig";
+  src: url("/fonts/pop_light.ttf");
 }
 @font-face {
-	font-family: "popMed";
-	src: url("/fonts/pop_medium.ttf");
+  font-family: "popMed";
+  src: url("/fonts/pop_medium.ttf");
 }
 @font-face {
-	font-family: "popReg";
-	src: url("/fonts/pop_regular.ttf");
+  font-family: "popReg";
+  src: url("/fonts/pop_regular.ttf");
 }
 @font-face {
-	font-family: "popThin";
-	src: url("/fonts/pop_thin.ttf");
-	
+  font-family: "popThin";
+  src: url("/fonts/pop_thin.ttf");
 }
 @font-face {
-	font-family: "popRare";
-	src: url("/fonts/yesteryear.ttf");
-	
+  font-family: "popRare";
+  src: url("/fonts/yesteryear.ttf");
 }
-
-
-
 
 $colors: (
-
-	colBlaHrk: #eee8e8,
-	azuOscHrk: #003889,
-	azuClaHrk: #2867be,
-	rojOscHrk: #8C0018,
-	rojClaHrk: #c91130,
-
+  thirdy: #eee8e8,
+  primary: #252525,
+  orangePrimary: #bf6e15,
+  orangeSecondary: #eca457,
 );
 
-
 :root {
-	
-	// Variables CSS generadas automáticamente a partir del map $colors
-	@each $name, $color in $colors {
-		// --colRoj: "red";
-		--#{$name}: #{$color};
-	}
-	
-	
-	// Color que cambia al estar en luz o gas (se modifica desde JS)
-	--colLuzGas: var(--colVerCor);
-	--hueRotate: var(0deg); // en gas 65deg
-	
+  // Variables CSS generadas automáticamente a partir del map $colors
+  @each $name, $color in $colors {
+    // --colRoj: "red";
+    --#{$name}: #{$color};
+  }
+
+  // Color que cambia al estar en luz o gas (se modifica desde JS)
+  --colLuzGas: var(--colVerCor);
+  --hueRotate: var(0deg); // en gas 65deg
 }
 
 // ***********************************************************
@@ -72,14 +60,14 @@ $colors: (
 
 // Clases generadas automáticamente con el mismo nombre que el nombre del color
 @each $colorName, $color in $colors {
-    .#{$colorName} {
-       color: $color !important;
-    }
+  .#{$colorName} {
+    color: $color !important;
+  }
 }
 
-.hueRotate {filter: hue-rotate(var(--hueRotate)) };
-
-
+.hueRotate {
+  filter: hue-rotate(var(--hueRotate));
+}
 
 // ***********************************************************
 // Padding
@@ -96,11 +84,11 @@ $em6: 8em;
 // Text size
 // ***********************************************************
 
-$fs5: 2.30em; // 40px
-$fs8: calc( #{$fs5} * 5.00);
-$fs7: calc( #{$fs5} * 1.75);
-$fs6: calc( #{$fs5} * 1.35);
-$fs4: calc( #{$fs5} * 0.70); // 30px
-$fs3: calc( #{$fs5} * 0.505); // 21px
-$fs2: calc( #{$fs5} * 0.43); // 18px 
-$fs1: calc( #{$fs5} * 0.368); // 15px 
+$fs5: 2.3em; // 40px
+$fs8: calc(#{$fs5} * 5);
+$fs7: calc(#{$fs5} * 1.75);
+$fs6: calc(#{$fs5} * 1.35);
+$fs4: calc(#{$fs5} * 0.7); // 30px
+$fs3: calc(#{$fs5} * 0.505); // 21px
+$fs2: calc(#{$fs5} * 0.43); // 18px
+$fs1: calc(#{$fs5} * 0.368); // 15px

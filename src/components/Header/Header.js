@@ -1,18 +1,24 @@
-'use client';
+"use client";
 
-import classNames from 'classnames';
-import Image from 'next/image';
-import Link from 'next/link';
-import React from 'react';
-import '../../styles/header.scss';
-import Menu from './Menu';
-import BurgerMenu from './BurgerMenu';
+import classNames from "classnames";
+import Image from "next/image";
+import Link from "next/link";
+import React from "react";
+import "../../styles/header.scss";
+import Menu from "./Menu";
+import BurgerMenu from "./BurgerMenu";
 
 const Header = () => {
   return (
-    <div className={classNames('headerWrapper')}>
-      <Link href={'/'}>
-        <Image src={'/img/hrk_global_trade_color.svg'} alt={'hrk logo'} width={140} height={30} className="z-40" />
+    <div className={classNames("headerWrapper")}>
+      <Link href={"/"}>
+        <Image
+          src={"/img/industrial_supply_network_logo.svg"}
+          alt={"Industrial Supply Network logo"}
+          width={140}
+          height={30}
+          className="z-40"
+        />
       </Link>
       <BurgerMenu />
       <Menu className="desBotBox" />

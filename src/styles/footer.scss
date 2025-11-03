@@ -7,7 +7,7 @@
     grid-template-columns: 1fr 1fr 1fr;
     gap: fontVar.$em4;
     font-family: popReg;
-    color: var(--azuOscHrk);
+    color: var(--primary);
     margin-top: fontVar.$em6;
     margin-bottom: fontVar.$em4;
 
@@ -38,7 +38,7 @@
             align-items: center;
             width: 50%;
             height: auto;
-            border-left: 2px solid var(--azuOscHrk);
+            border-left: 2px solid var(--primary);
             padding: fontVar.$em3;
 
             span {
@@ -60,7 +60,7 @@
         align-items: flex-start;
         width: 100%;
         padding: fontVar.$em3;
-        border-right: 2px solid var(--azuOscHrk);
+        border-right: 2px solid var(--primary);
 
         .titTex {
 
@@ -83,7 +83,7 @@
         .addBox {
 
             border: none;
-            border-top: 2px solid var(--azuOscHrk);
+            border-top: 2px solid var(--primary);
         }
     
     }

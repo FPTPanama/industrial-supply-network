@@ -1,7 +1,9 @@
 @use '_font-variables' as fontVar;
 @import "./mixins.scss";
 
-********************************************************
+// ********************************************************
+// Estilos globales
+// ********************************************************
 
 * {
 	
@@ -34,7 +36,7 @@ body {
 	
 	overflow-x: hidden;
 	font-size: 14px;
-	background-color: var(--colBlaHrk);
+	background-color: var(--thirdy);
 	background-size: cover;
 	background-size: 50%;
 	// -webkit-text-size-adjust: none;
@@ -672,7 +674,7 @@ h2 {
 
 	font-size: fontVar.$fs5;
 	font-family: popThin;
-	color: var(--azuOscHrk);
+	color: var(--primary);
 	max-width: 560px;
 	line-height: fontVar.$em3;
 	margin-bottom: fontVar.$em2;
