@@ -32,10 +32,8 @@ const Footer = ({ show = true }) => {
 
             <div className="addBox">
               <p className={classNames("titTex")}>Company location</p>
-
-              <p className={classNames("text-xs")}>Calle 55, PH SFC. Oficina 26D</p>
-
-              <p className={classNames("text-xs")}>Obarrio, Panama City, Panamá</p>
+              <p className={classNames("text-xs")}>2627 NE 203RD ST STE 209</p>
+              <p className={classNames("text-xs")}>Aventura, FL 33180</p>
             </div>
 
             <div className="redSocBox">

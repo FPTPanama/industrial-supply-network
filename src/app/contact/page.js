@@ -23,8 +23,8 @@ const Contact = () => {
               <Link href={'tel:+507-3886501'}>
                 <span className="telLink">+507-3886501</span>
               </Link>
-              <Link href={'mailto:info@hrkglobaltrade.com'}>
-                <span className="emailLink">info@hrkglobaltrade.com</span>
+              <Link href={'mailto:sales@industrialsupply-us.com'}>
+                <span className="emailLink">sales@industrialsupply-us.com</span>
               </Link>
             </div>
           </div>
