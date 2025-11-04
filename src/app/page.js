@@ -264,7 +264,16 @@ export default function Home() {
                   How can we assist?
                 </Link>
               </div>
-              <div ref={containerRef} className={classNames("imgBox", "slide-left")}>
+              <div
+                ref={containerRef}
+                className={classNames(
+                  "imgBox",
+                  "slide-left",
+                  "flex",
+                  "items-center",
+                  "justify-center"
+                )}
+              >
                 <Image
                   src={"/img/container_blanco.webp"}
                   width={580}
@@ -356,7 +365,7 @@ export default function Home() {
                 className={classNames("conImg", cargoOnBoard ? "slide-left" : "hidden")}
               >
                 <Image
-                  src={"/img/cargo_perforado_v2.webp"}
+                  src={"/img/cargo_perforado_v4.webp"}
                   width={699}
                   height={330}
                   alt={"operador"}
@@ -370,7 +379,8 @@ export default function Home() {
               <h2 className={classNames("strong m0")}>REDUCE HAZARDS.</h2>
 
               <p className={classNames("reg")}>
-                Regardless of shipment or location, We provide guidance through every stage, covering{" "}
+                Regardless of shipment or location, We provide guidance through every stage,
+                covering{" "}
                 <span className={classNames("strong")}>
                   both metallic and steel materials throughout
                 </span>
@@ -394,7 +404,7 @@ export default function Home() {
               )}
             >
               <Image
-                src={"/img/ten_years_blue.svg"}
+                src={"/img/ten_years_black.svg"}
                 alt="10_anyos"
                 height={40}
                 width={250}
