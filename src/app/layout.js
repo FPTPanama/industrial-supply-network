@@ -12,6 +12,7 @@ import "../styles/form-hrk.scss";
 import "../styles/services.scss";
 import "../styles/products.scss";
 import classNames from "classnames";
+import { OrganizationSchema, WebSiteSchema } from "@/components/SEO/StructuredData";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -19,26 +20,57 @@ export const metadata = {
   title: "Industrial Supply Network | Material commerce for metallic and steel materials",
   description:
     "We offer an extensive range of complete and partial products. Metal goods, steel waste, base materials, processed metals, mineral concentrates and associated derivatives",
+  keywords: [
+    "industrial supply",
+    "metallic materials",
+    "steel materials",
+    "ferrous",
+    "steel",
+    "iron",
+    "caustic soda",
+    "aluminum",
+    "metal commerce",
+    "steel waste",
+    "mineral concentrates",
+  ],
+  authors: [{ name: "Industrial Supply Network" }],
   openGraph: {
-    title: "Industrial Supply Network",
+    title: "Industrial Supply Network | Material commerce for metallic and steel materials",
     description:
       "We offer an extensive range of complete and partial products. Metal goods, steel waste, base materials, processed metals, mineral concentrates and associated derivatives",
-    url: "https://hrkglobaltrade.com",
-    siteName: "www.hrkglobaltrade",
-    keywords: ["ferrous", "steel", "iron", "caustic soda"],
+    url: "https://industrialsupply-us.com",
+    siteName: "Industrial Supply Network",
     images: [
       {
-        url: "https://hrkglobaltrade.com/img/industrial_metaimage.webp",
+        url: "https://industrialsupply-us.com/img/industrial_metaimage.webp",
         width: 1200,
         height: 630,
         alt: "Industrial Supply Network",
       },
     ],
-    locale: "es_ES",
+    locale: "en_US",
     type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Industrial Supply Network | Material commerce for metallic and steel materials",
+    description:
+      "We offer an extensive range of complete and partial products. Metal goods, steel waste, base materials, processed metals, mineral concentrates and associated derivatives",
+    images: ["https://industrialsupply-us.com/img/industrial_metaimage.webp"],
   },
   icons: {
     icon: "/favicon.ico",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-video-preview": -1,
+      "max-image-preview": "large",
+      "max-snippet": -1,
+    },
   },
 };
 
@@ -46,6 +78,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.className}>
       <body className={classNames(inter.className, "scrollbar-thin")}>
+        <OrganizationSchema />
+        <WebSiteSchema />
         {/* <Header /> */}
         {children}
         {/* <Footer /> */}
