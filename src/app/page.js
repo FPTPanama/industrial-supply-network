@@ -264,9 +264,18 @@ export default function Home() {
                   How can we assist?
                 </Link>
               </div>
-              <div ref={containerRef} className={classNames("imgBox", "slide-left")}>
+              <div
+                ref={containerRef}
+                className={classNames(
+                  "imgBox",
+                  "slide-left",
+                  "flex",
+                  "items-center",
+                  "justify-center"
+                )}
+              >
                 <Image
-                  src={"/img/cargo_ship_v2.webp"}
+                  src={"/img/container_blanco.webp"}
                   width={580}
                   height={760}
                   alt="container"
