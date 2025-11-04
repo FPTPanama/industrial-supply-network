@@ -266,7 +266,7 @@ export default function Home() {
               </div>
               <div ref={containerRef} className={classNames("imgBox", "slide-left")}>
                 <Image
-                  src={"/img/container_blanco.webp"}
+                  src={"/img/cargo_ship_v2.webp"}
                   width={580}
                   height={760}
                   alt="container"
