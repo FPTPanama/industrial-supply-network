@@ -53,7 +53,7 @@ const Services = () => {
         <section className={classNames("serTitWra")}>
           <div className={classNames("infBox")}>
             <h1>
-              Whatever task you require,<span> We handle</span>{" "}
+              Any assignment you need,<span> We manage</span>{" "}
               <span
                 ref={EVERYTHING}
                 style={{ fontFamily: "popRare" }}
@@ -63,7 +63,7 @@ const Services = () => {
 
             <div className={classNames("butBox", "transition-all")}>
               <Link href={"/contact"} className={classNames("conBot", "transition-all")}>
-                Contact Us
+                Get in Touch
               </Link>
             </div>
           </div>
@@ -83,19 +83,19 @@ const Services = () => {
 
         <section className={classNames("tecAdvWra")}>
           <div className={classNames("infBox")}>
-            <h3>Risk Mitigation</h3>
+            <h3>Risk Management</h3>
 
             <p>
-              At <span>HRK Global Trading</span> we recognize that risk mitigation is essential to
-              reach our business objectives, which is why the company enforces rigorous internal
-              control mechanisms to{" "}
-              <span> guarantee that risk is substantially reduced or removed</span>.
+              At <span>Industrial Supply Network</span> we understand that risk management is crucial to
+              achieve our corporate goals, which is why the organization implements strict internal
+              control systems to{" "}
+              <span> ensure that risk is significantly minimized or eliminated</span>.
             </p>
             <p>
-              <span>We prioritize our client's security</span> and that is why we create contract
-              clauses which support our procedures and reduce the business risk. Similarly We have
-              built a strong financial standing together with banks and other financial entities
-              that enable us to <span>deliver optimal solutions for our clients</span>.
+              <span>We focus on our client's protection</span> and that is why we develop contract
+              terms which reinforce our processes and minimize commercial risk. Additionally We have
+              established a solid financial position with banks and other financial institutions
+              that allow us to <span>provide ideal solutions for our clients</span>.
             </p>
 
             <div className={classNames("icoBox")}>
@@ -106,19 +106,19 @@ const Services = () => {
           </div>
 
           <div className={classNames("infBox")}>
-            <h3>Quality Assurance</h3>
+            <h3>Quality Control</h3>
 
             <p>
-              At <span>HKR</span> one of our core foundations is <span>Quality Assurance</span>, we
-              excel in most of our operations because we coordinate our procedures alongside our
-              team of specialists, overseeing aspects including:
+              At <span>Industrial Supply Network</span> one of our fundamental pillars is <span>Quality Control</span>, we
+              succeed in most of our activities because we organize our processes together with our
+              team of professionals, monitoring elements including:
             </p>
             <p>
-              <span>Weight verification:</span> When dealing raw materials, inadequate weight
-              verification results in increased expenses, which is why at <span>HRK Global</span> we
-              ensure that the shipment of minerals aligns with our agreements.{" "}
-              <span>How is this achieved?</span> Our team of experts has established connections
-              with verification firms that will validate the shipment.
+              <span>Weight validation:</span> When handling raw materials, insufficient weight
+              validation leads to higher costs, which is why at <span>Industrial Supply Network</span> we
+              make sure that the delivery of minerals matches our contracts.{" "}
+              <span>How do we accomplish this?</span> Our group of specialists has developed relationships
+              with validation companies that will verify the delivery.
             </p>
 
             <div className={classNames("icoBox")}>
@@ -128,22 +128,22 @@ const Services = () => {
             </div>
           </div>
           <div className={classNames("infBox")}>
-            <h3>Agreement Discussions</h3>
+            <h3>Contract Negotiations</h3>
 
             <p>
-              We offer professional guidance on agreement discussions and examination of clauses,
-              assisting you to bypass 'concealed' details. We bring expertise and logic{" "}
-              <span>enabling suitable and beneficial solutions</span>. We allow you to stay in
-              command of your own future, with{" "}
-              <span>full openness ensured throughout every phase</span>.
+              We provide expert advice on contract negotiations and review of terms,
+              helping you to avoid 'hidden' information. We offer knowledge and reasoning{" "}
+              <span>creating appropriate and advantageous solutions</span>. We enable you to remain in
+              control of your own destiny, with{" "}
+              <span>complete transparency maintained during every step</span>.
             </p>
             <p>
-              We also offer <span>risk reduction of possible agreement problem areas</span>.
+              We also provide <span>risk minimization of potential contract issue points</span>.
             </p>
             <p>
-              We thoroughly describe{" "}
-              <span>Transportation and Charter Party clauses (spot or C.O.A.)</span> and discuss to
-              guarantee reduced discrepancies between vessel owner and buyer.
+              We comprehensively explain{" "}
+              <span>Shipping and Charter Party terms (spot or C.O.A.)</span> and negotiate to
+              ensure minimized conflicts between ship owner and purchaser.
             </p>
 
             <div className={classNames("icoBox")}>
@@ -154,15 +154,15 @@ const Services = () => {
           </div>
 
           <div className={classNames("infBox")}>
-            <h3>Customer Relations</h3>
+            <h3>Client Relationships</h3>
 
             <p>
-              <span>We recognize how vital connections are</span>. We operate aligned with your
-              organization's principles and are certain that{" "}
-              <span>We can additionally strengthen and grow your international network</span>{" "}
-              creating fresh and promising possibilities. All operations personnel will communicate
-              and meet frequently <span>to guarantee complete customer contentment</span>, trust and
-              collaboration.
+              <span>We understand how important relationships are</span>. We work in accordance with your
+              company's values and are confident that{" "}
+              <span>We can further enhance and expand your global network</span>{" "}
+              generating new and exciting opportunities. All operational staff will interact
+              and convene regularly <span>to ensure total client satisfaction</span>, confidence and
+              partnership.
             </p>
 
             <div className={classNames("icoBox")}>
@@ -173,14 +173,14 @@ const Services = () => {
           </div>
 
           <div className={classNames("infBox")}>
-            <h3>Issue Resolution</h3>
+            <h3>Problem Solving</h3>
 
             <p>
-              We possess over <span>20 years' expertise in issue resolution</span> and deliver{" "}
-              <span>practical solutions</span>. Our skilled team can handle legal disputes,
-              transportation matters/obligations and assistance with a selection of maritime
-              attorneys. <span>Specialist guidance</span> is provided on potential upcoming concerns
-              with existing agreements and approaches for preventing renegotiation difficulties.
+              We have over <span>20 years' experience in problem solving</span> and provide{" "}
+              <span>realistic solutions</span>. Our experienced team can manage legal conflicts,
+              shipping issues/commitments and support with a range of maritime
+              lawyers. <span>Expert consultation</span> is offered on potential future issues
+              with current contracts and methods for avoiding renegotiation problems.
             </p>
 
             <div className={classNames("icoBox")}>
@@ -191,17 +191,17 @@ const Services = () => {
           </div>
 
           <div className={classNames("infBox")}>
-            <h3>Discussions</h3>
+            <h3>Consultations</h3>
 
             <p>
-              We offer <span>examination and assessment of agreements</span> and problems occurring
-              during agreement implementation.
+              We provide <span>review and evaluation of contracts</span> and issues arising
+              during contract execution.
             </p>
 
             <p>
-              We additionally{" "}
-              <span>assist in preparing for upcoming discussions with prospective purchasers</span>{" "}
-              and provide suggestions on clauses and trustworthiness of counterparties.
+              We also{" "}
+              <span>help in getting ready for future consultations with potential buyers</span>{" "}
+              and offer recommendations on terms and reliability of partners.
             </p>
 
             <div className={classNames("icoBox")}>
@@ -212,13 +212,13 @@ const Services = () => {
           </div>
 
           <div className={classNames("infBox")}>
-            <h3>Market Research</h3>
+            <h3>Market Analysis</h3>
 
             <p>
-              Through ongoing engagement in the global markets and years of information and studies,{" "}
-              <span>We take pride in our data stream</span>.{" "}
-              <span>Customers will be informed of weekly updates</span> through reports emphasizing
-              market changes and patterns, with immediate notifications on pertinent matters.
+              Through continuous participation in the international markets and years of data and research,{" "}
+              <span>We are proud of our information flow</span>.{" "}
+              <span>Clients will receive weekly updates</span> through reports highlighting
+              market trends and developments, with instant alerts on relevant topics.
             </p>
 
             <div className={classNames("icoBox")}>
@@ -229,16 +229,16 @@ const Services = () => {
           </div>
 
           <div className={classNames("infBox")}>
-            <h3>Insurance</h3>
+            <h3>Insurance Services</h3>
 
             <p>
-              <span>We can arrange appropriate insurance coverage for shipments</span> and display a
-              range of options for you to select from.
+              <span>We can organize suitable insurance protection for deliveries</span> and present a
+              variety of choices for you to choose from.
             </p>
 
             <p>
-              We supply <span>assistance and expertise on filing insurance claims</span>, gathering
-              of paperwork and communication with insurers and damage evaluators.
+              We offer <span>support and knowledge on submitting insurance claims</span>, collection
+              of documents and interaction with insurance companies and loss assessors.
             </p>
 
             <div className={classNames("icoBox")}>
@@ -249,12 +249,12 @@ const Services = () => {
           </div>
 
           <div className={classNames("infBox")}>
-            <h3>Transportation Strategy</h3>
+            <h3>Shipping Strategy</h3>
 
             <p>
-              <span>HRK Global Trading</span> collaborates with a{" "}
-              <span>extensive network of chartering firms</span> to guarantee all transportation
-              requirements.
+              <span>Industrial Supply Network</span> works with a{" "}
+              <span>wide network of chartering companies</span> to ensure all shipping
+              needs.
             </p>
 
             <div className={classNames("icoBox")}>
@@ -267,59 +267,59 @@ const Services = () => {
 
         <section className={classNames("serIncWra")}>
           <div className={classNames("serBox", "items-end", "text-right")}>
-            <h3>Services comprise</h3>
+            <h3>Services include</h3>
 
             <ul>
               <li>
-                <span>Route planning</span> assessment
+                <span>Route evaluation</span> and planning
               </li>
               <li>
-                <span>Examination of sales clauses</span> – securing business safeguards
+                <span>Review of sales terms</span> – establishing commercial protections
               </li>
               <li>
-                Inspection of suggested ships for <span>appropriateness</span> and{" "}
-                <span>security</span>
+                Evaluation of proposed vessels for <span>suitability</span> and{" "}
+                <span>safety</span>
               </li>
               <li>
-                <span>Comparative analysis</span> to support sales efforts – discussion and guidance
-                on shipping rates
+                <span>Competitive comparison</span> to assist sales activities – consultation and advice
+                on freight rates
               </li>
               <li>
-                <span>Locked</span> and <span>variable</span> price transportation coverage
+                <span>Fixed</span> and <span>flexible</span> price shipping options
               </li>
               <li>
-                <span>Discussion</span> and <span>counsel</span> on port handling agreements
+                <span>Consultation</span> and <span>guidance</span> on port service agreements
               </li>
               <li>
-                <span>Solid partnerships</span> with regional vessel owners
+                <span>Strong alliances</span> with local ship owners
               </li>
             </ul>
           </div>
 
           <div className={classNames("serBox")}>
-            <h3>Administrative Oversight</h3>
+            <h3>Administrative Management</h3>
             <ul>
               <li>
-                <span>Frequent meetings with our customers</span>, for information sharing and
-                executive talks{" "}
+                <span>Regular meetings with our clients</span>, for data exchange and
+                management discussions{" "}
               </li>
               <li>
-                <span>Bilingual</span> <span>English</span> and <span>Spanish</span> personnel
+                <span>Bilingual</span> <span>English</span> and <span>Spanish</span> staff
               </li>
               <li>
-                <span>Complete administrative oversight</span> of all choice-making procedures{" "}
+                <span>Full administrative management</span> of all decision-making processes{" "}
               </li>
               <li>
-                Complete and <span>ongoing access</span> to international connections{" "}
+                Full and <span>continuous access</span> to global connections{" "}
               </li>
               <li>
-                Records of all electronic communications and{" "}
-                <span>daily/weekly progress reports</span>{" "}
+                Documentation of all digital communications and{" "}
+                <span>daily/weekly status reports</span>{" "}
               </li>
-              <li>Top class reporting structures </li>
+              <li>Premium reporting systems </li>
               <li>
-                <span>Inspectors</span> or financial experts{" "}
-                <span>are invited to our main office</span>
+                <span>Auditors</span> or financial specialists{" "}
+                <span>are welcome at our headquarters</span>
               </li>
             </ul>
           </div>

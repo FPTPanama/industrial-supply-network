@@ -21,9 +21,9 @@ const Contact = () => {
               />
             </div>
             <p>
-              <span>Industrial Supply Network</span> primary operations hub is situated in{" "}
-              <span>Miami</span>, <span>United States</span> with regional and branch offices
-              situated in <span>Panama City</span>, <span>Panamá</span> and{" "}
+              <span>Industrial Supply Network</span> main operations center is located in{" "}
+              <span>Miami</span>, <span>United States</span> with regional and branch locations
+              based in <span>Panama City</span>, <span>Panamá</span> and{" "}
               <span>Ciudad Guayana</span>, Venezuela.{" "}
             </p>
             <div className="infTex">

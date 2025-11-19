@@ -48,62 +48,62 @@ const MenuProducts = ({ productType, setProductType }) => {
 
   const items = [
     {
-      label: "Construction",
+      label: "Building materials",
       key: "construction",
       icon: <MdConstruction size={20} />,
     },
     {
-      label: "Energy distribution",
+      label: "Electrical distribution",
       key: "energy",
       icon: <MdOutlineEnergySavingsLeaf size={20} />,
     },
     {
-      label: "Asphalt layer",
+      label: "Bitumen membrane",
       key: "manto_asfaltico",
       icon: <PiRoadHorizonFill size={20} />,
     },
     {
-      label: "Glass & aluminum",
+      label: "Glass and aluminium",
       key: "glass_aluminium",
       icon: <SettingOutlined />,
     },
     {
-      label: "Elevator",
+      label: "Lifts",
       key: "ascensores",
       icon: <FaElevator size={20} />,
     },
     {
-      label: "Natural grass",
+      label: "Natural turf",
       key: "pasto_natural",
       icon: <GiHighGrass size={20} />,
     },
     {
-      label: "Wooden floors",
+      label: "Wood flooring",
       key: "piso_madera",
       icon: <BsBricks size={20} />,
     },
     {
-      label: "Air Conditioners",
+      label: "Air conditioning",
       key: "aire_acondicionado",
       icon: <FaRegSnowflake size={20} />,
     },
     {
-      label: "Fire fighting systems",
+      label: "Fire safety systems",
       key: "contraincendios",
       icon: <FaFireExtinguisher size={20} />,
     },
     {
-      label: "Electric generators",
+      label: "Power generators",
       key: "generadores_electricos",
       icon: <TbWavesElectricity size={20} />,
     },
     {
-      label: "Filtration systems",
+      label: "Water filtering",
       key: "filtracion",
       icon: <MdOutlineFilterAlt size={20} />,
     },
     {
-      label: "Wastewater treatments",
+      label: "Wastewater treatment",
       key: "aguas_residuales",
       icon: <MdOutlineWaterDamage size={20} />,
     },
