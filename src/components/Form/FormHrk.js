@@ -73,15 +73,15 @@ const FormHrk = () => {
         {
           loadingResponse ?
 
-            <p className={classNames('text-white', 'text-5xl', 'slide-fwd-center')}>Submitting your inquiry</p>
+            <p className={classNames('text-white', 'text-5xl', 'slide-fwd-center')}>Processing your request</p>
 
             :
 
             <div className={classNames('flex', 'flex-col', 'md:w-1/2', 'w-full', 'h-1/2', 'border-white', 'rounded-3xl', 'p-5', 'justify-center', 'items-center', 'gap-4', 'slide-fwd-center')}>
               <MdOutlineMarkEmailRead size={400} color='white' />
               <div className={classNames('flex', 'flex-col', 'w-9/12', 'h-fit', 'md:items-center', 'md:justify-center')}>
-                <p style={{ fontFamily: 'popBold' }} className={classNames('text-white', 'md:text-5xl', 'text-3xl', 'font-bold')}>Thank you for reaching out.</p>
-                <p style={{ fontFamily: 'popThin' }} className={classNames('text-white', 'md:text-5xl', 'text-3xl')}> We will reach out to you shortly.</p>
+                <p style={{ fontFamily: 'popBold' }} className={classNames('text-white', 'md:text-5xl', 'text-3xl', 'font-bold')}>Thank you for contacting us.</p>
+                <p style={{ fontFamily: 'popThin' }} className={classNames('text-white', 'md:text-5xl', 'text-3xl')}> We will get back to you soon.</p>
               </div>
 
               <button onClick={() => setShowModal(false)} className={classNames('text-white', 'border-white', 'border-2', 'h-40', 'px-24', 'rounded-2xl', 'hover:text-xl', 'hover:px-28', 'transition-all')}>Done</button>

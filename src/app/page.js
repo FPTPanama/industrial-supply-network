@@ -8,9 +8,11 @@ import { useInView } from "react-intersection-observer";
 import { useRef, useEffect } from "react";
 import Typed from "typed.js";
 import Link from "next/link";
+import { useTranslation } from "@/hooks/useTranslation";
 import "../styles/home.scss";
 
 export default function Home() {
+  const { t } = useTranslation();
   const TRANSACTIONS = useRef(null);
   const COUNTRIES = useRef(null);
   const TWENTY = useRef(null);
@@ -68,28 +70,28 @@ export default function Home() {
 
   const weCanDo = [
     {
-      title: "Expert consultation",
+      title: t.home.expertConsultation,
       url: "",
       color: "#003989d4",
       initialHeight: 0,
       finalHeight: 300,
     },
     {
-      title: "Sourcing and purchasing",
+      title: t.home.sourcing,
       url: "",
       color: "#0043a1d4",
       initialHeight: 0,
       finalHeight: 300,
     },
     {
-      title: "Planning",
+      title: t.home.planning,
       url: "",
       color: "#004fbed4",
       initialHeight: 0,
       finalHeight: 300,
     },
     {
-      title: "Implementation",
+      title: t.home.implementation,
       url: "",
       color: "#0156ced4",
       initialHeight: 0,
@@ -99,7 +101,7 @@ export default function Home() {
 
   const ourProductsIndustry = [
     {
-      title: "Aluminum",
+      title: "Aluminium",
       url: "aluminium.webp",
       color: "#003889",
     },
@@ -114,12 +116,12 @@ export default function Home() {
       color: "#003889",
     },
     {
-      title: "Caustic Soda",
+      title: "Sodium Hydroxide",
       url: "caustic_soda.webp",
       color: "#003889",
     },
     {
-      title: "Aluminum Fluoride",
+      title: "Aluminium Fluoride",
       url: "aluminum_fluoride.webp",
       color: "#003889",
     },
@@ -127,17 +129,17 @@ export default function Home() {
 
   const ourProductsConstruction = [
     {
-      title: "Power distribution",
+      title: "Electrical distribution",
       url: "energy_distribution.webp",
       color: "#003889",
     },
     {
-      title: "Asphalt coating",
+      title: "Bitumen membrane",
       url: "asphalt_layer.webp",
       color: "#003889",
     },
     {
-      title: "Glass & aluminium",
+      title: "Glass and aluminium",
       url: "glass_aluminum.webp",
       color: "#003889",
     },
@@ -147,37 +149,37 @@ export default function Home() {
       color: "#003889",
     },
     {
-      title: "Organic turf",
+      title: "Natural grass",
       url: "natural_grass.webp",
       color: "#003889",
     },
     {
-      title: "Timber flooring",
+      title: "Wood flooring",
       url: "wooden_floors.webp",
       color: "#003889",
     },
     {
-      title: "Climate control",
+      title: "Air conditioning",
       url: "air_conditioners.webp",
       color: "#003889",
     },
     {
-      title: "Fire protection systems",
+      title: "Fire safety systems",
       url: "fire_fighting.webp",
       color: "#003889",
     },
     {
-      title: "Power generators",
+      title: "Electric generators",
       url: "electric_generators.webp",
       color: "#003889",
     },
     {
-      title: "Water filtration",
+      title: "Water filtering",
       url: "filtration_systems.webp",
       color: "#003889",
     },
     {
-      title: "Water treatment systems",
+      title: "Wastewater treatment",
       url: "wastewater_treatments.webp",
       color: "#003889",
     },
@@ -229,21 +231,21 @@ export default function Home() {
 
   const numStasts = [
     {
-      title: "Tonnes shipped",
+      title: t.home.tonnesShipped,
       amount: 3500000,
       color: "#003989d4",
       show: tonsOnBoard,
       ref: toneladasTransportadasRef,
     },
     {
-      title: "Kilometers covered",
+      title: t.home.kilometersCovered,
       amount: 550000,
       color: "#0043a1d4",
       show: milesOnBoard,
       ref: millasRecorridasRef,
     },
     {
-      title: "Managed projects",
+      title: t.home.managedProjects,
       amount: 300,
       color: "#0156ced4",
       show: opOnBoard,
@@ -258,10 +260,10 @@ export default function Home() {
           <section className={classNames("homTitWra")}>
             <div className={classNames("homTitBox")}>
               <div className={classNames("titBox", "fade-on")}>
-                <h1>Material commerce</h1>
-                <h2>for metallic and steel materials</h2>
+                <h1>{t.home.title}</h1>
+                <h2>{t.home.subtitle}</h2>
                 <Link href={"/contact"} className={classNames("butTalYou", "transition-all")}>
-                  How can we assist?
+                  {t.home.cta}
                 </Link>
               </div>
               <div
@@ -289,20 +291,19 @@ export default function Home() {
             <h3
               className={classNames("bolder", "primary", "md:text-6xl", "text-4xl", "sm:leading-9")}
             >
-              OUR CATALOG
+              {t.home.catalog}
             </h3>
             <div className={classNames("infBox")}>
               <div className={classNames("titBox")}>
                 <p className={classNames("sm:text-2xl", "text-xl", "bolder")}>
-                  We offer an extensive range of complete and partial products.
+                  {t.home.catalogDescription}
                 </p>
                 <p className={classNames("sm:text-xl", "text-sm")}>
-                  Metal goods, steel waste, base materials, processed metals, mineral concentrates
-                  and associated derivatives.{" "}
+                  {t.home.catalogSubdescription}{" "}
                 </p>
               </div>
               <div className={classNames("flex", "items-center", "justify-start", "w-full")}>
-                <p className={classNames("bolder", "text-4xl")}>Industrial materials</p>
+                <p className={classNames("bolder", "text-4xl")}>{t.home.industrialMaterials}</p>
               </div>
               <div className={classNames("imgWraBox")}>
                 {ourProductsIndustry.map((item, key) => {
@@ -330,7 +331,7 @@ export default function Home() {
               <div
                 className={classNames("flex", "items-center", "justify-start", "w-full", "mt-20")}
               >
-                <p className={classNames("bolder", "text-4xl")}>Construction supplies</p>
+                <p className={classNames("bolder", "text-4xl")}>{t.home.constructionSupplies}</p>
               </div>
               <div className={classNames("imgWraBox")}>
                 {ourProductsConstruction.map((item, key) => {
@@ -375,21 +376,15 @@ export default function Home() {
             </div>
 
             <div className="titBox">
-              <h2 className={classNames("strong m0")}>OPTIMIZE COST EFFICIENCY.</h2>
-              <h2 className={classNames("strong m0")}>REDUCE HAZARDS.</h2>
+              <h2 className={classNames("strong m0")}>{t.home.optimizeCost}</h2>
+              <h2 className={classNames("strong m0")}>{t.home.reduceHazards}</h2>
 
               <p className={classNames("reg")}>
-                Regardless of shipment or location, We provide guidance through every stage,
-                covering{" "}
-                <span className={classNames("strong")}>
-                  both metallic and steel materials throughout
-                </span>
+                {t.home.optimizeText}{" "}
+                <span className={classNames("strong")}>{t.home.optimizeTextBold}</span>
               </p>
 
-              <p className={classNames("reg")}>
-                Our goal is to partner with your business providing tailored solutions for each
-                project
-              </p>
+              <p className={classNames("reg")}>{t.home.goalText}</p>
             </div>
           </section>
 
@@ -412,7 +407,7 @@ export default function Home() {
               />
 
               <p className={classNames("strong", "text-2xl", "primary", "max-w-[300px]")}>
-                BUSINESS IN OUR AREA
+                {t.home.businessArea}
               </p>
             </div>
 
@@ -485,7 +480,7 @@ export default function Home() {
             <h3
               className={classNames("bolder", "primary", "md:text-6xl", "text-4xl", "sm:leading-9")}
             >
-              HOW CAN WE HELP?
+              {t.home.howCanWeHelp}
             </h3>
 
             <div className={classNames("griWhaWra")}>

@@ -23,15 +23,15 @@ const Footer = ({ show = true }) => {
 
               <div className={classNames("infBox")}>
                 <p className={classNames("text-xs")}>
-                  <span>Industrial Supply Network</span> primary operations hub is situated in{" "}
-                  <span>Miami, United States</span> with regional and branch offices situated in{" "}
+                  <span>Industrial Supply Network</span> main operations center is located in{" "}
+                  <span>Miami, United States</span> with regional and branch locations based in{" "}
                   <span>Panama City, Panama</span> and <span>Ciudad Guayana, Venezuela</span>.
                 </p>
               </div>
             </div>
 
             <div className="addBox">
-              <p className={classNames("titTex")}>Company location</p>
+              <p className={classNames("titTex")}>Office address</p>
               <p className={classNames("text-xs")}>2627 NE 203RD ST STE 209</p>
               <p className={classNames("text-xs")}>Aventura, FL 33180</p>
             </div>
