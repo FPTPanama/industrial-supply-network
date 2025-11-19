@@ -436,7 +436,7 @@ export const productos = {
       {
         name: '8, 10, 12 HP',
         imgSrc: '/img/products/aires_acondicionados/daikin_8hp.webp',
-        description: 'The single exterior unit has only two different forms and sizes, which not only streamlines the design process but also elevates the system's adaptability to a new level.',
+        description: 'The single exterior unit has only two different forms and sizes, which not only streamlines the design process but also elevates the system\'s adaptability to a new level.',
         applications: [
           'Spaces',
           'Workplaces',
@@ -533,7 +533,7 @@ export const productos = {
       {
         name: 'QAS+ 125',
         imgSrc: '/img/products/generadores_electricos/qas_125.webp',
-        description: 'A standby generator is a crucial component of any company's operational network. It must be prepared and capable of delivering power in case of a power supply disruption.',
+        description: 'A standby generator is a crucial component of any company\'s operational network. It must be prepared and capable of delivering power in case of a power supply disruption.',
       },
     ]
   },

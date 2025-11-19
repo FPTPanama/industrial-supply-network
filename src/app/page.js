@@ -381,14 +381,10 @@ export default function Home() {
 
               <p className={classNames("reg")}>
                 {t.home.optimizeText}{" "}
-                <span className={classNames("strong")}>
-                  {t.home.optimizeTextBold}
-                </span>
+                <span className={classNames("strong")}>{t.home.optimizeTextBold}</span>
               </p>
 
-              <p className={classNames("reg")}>
-                {t.home.goalText}
-              </p>
+              <p className={classNames("reg")}>{t.home.goalText}</p>
             </div>
           </section>
 
