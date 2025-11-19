@@ -1,0 +1,10 @@
+[build]
+  command = "npm run build"
+  # El plugin de Next.js maneja automáticamente el output
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"
+
+[build.environment]
+  NODE_VERSION = "18"
+
