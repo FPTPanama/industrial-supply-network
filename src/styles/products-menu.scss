@@ -1,0 +1,285 @@
+.products-menu {
+  background: var(--thirdy) !important;
+  
+  .ant-menu-item {
+    cursor: pointer !important;
+    background: transparent !important;
+    width: 100% !important;
+    padding: 0 !important;
+    
+    // Asegurar que el contenido del label ocupe todo el espacio
+    .ant-menu-title-content {
+      width: 100% !important;
+      display: block !important;
+      
+      > div {
+        width: 100% !important;
+        padding: 8px 12px !important;
+        cursor: pointer !important;
+      }
+    }
+    
+    &:hover {
+      background: transparent !important;
+    }
+    
+    &.ant-menu-item-selected {
+      cursor: pointer !important;
+      background: transparent !important;
+      color: var(--orangePrimary) !important;
+      
+      // Asegurar que el texto y el icono sean naranjas
+      .ant-menu-title-content {
+        color: var(--orangePrimary) !important;
+        
+        > div {
+          color: var(--orangePrimary) !important;
+          
+          span {
+            color: var(--orangePrimary) !important;
+          }
+          
+          // Iconos también en naranja
+          > div {
+            color: var(--orangePrimary) !important;
+            
+            * {
+              color: var(--orangePrimary) !important;
+            }
+            
+            svg {
+              color: var(--orangePrimary) !important;
+              fill: var(--orangePrimary) !important;
+            }
+          }
+        }
+      }
+      
+      // Asegurar que todos los elementos hijos sean naranjas
+      * {
+        color: var(--orangePrimary) !important;
+      }
+      
+      svg {
+        color: var(--orangePrimary) !important;
+        fill: var(--orangePrimary) !important;
+      }
+    }
+  }
+  
+  // Estilos del scrollbar
+  &::-webkit-scrollbar {
+    width: 10px !important;
+    background: var(--thirdy) !important;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: var(--thirdy) !important;
+    border-radius: 5px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: var(--primary) !important;
+    border-radius: 5px;
+    border: none !important;
+    
+    &:hover {
+      background: var(--primary) !important;
+      cursor: pointer;
+    }
+  }
+  
+  // Botones del scrollbar (puntas/arrows)
+  &::-webkit-scrollbar-button {
+    display: none !important;
+    background: var(--thirdy) !important;
+    height: 0 !important;
+  }
+  
+  &::-webkit-scrollbar-button:start:decrement,
+  &::-webkit-scrollbar-button:end:increment {
+    display: none !important;
+    background: var(--thirdy) !important;
+  }
+  
+  // Corner (esquina donde se encuentran scrollbar horizontal y vertical)
+  &::-webkit-scrollbar-corner {
+    background: var(--thirdy) !important;
+  }
+}
+
+.menu-products-wrapper {
+  background: var(--thirdy) !important;
+  
+  // Estilos del scrollbar para el wrapper
+  &::-webkit-scrollbar {
+    width: 10px !important;
+    background: var(--thirdy) !important;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: var(--thirdy) !important;
+    border-radius: 5px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: var(--primary) !important;
+    border-radius: 5px;
+    border: none !important;
+    
+    &:hover {
+      background: var(--primary) !important;
+      cursor: pointer;
+    }
+  }
+  
+  // Botones del scrollbar
+  &::-webkit-scrollbar-button {
+    display: none !important;
+    background: var(--thirdy) !important;
+    height: 0 !important;
+  }
+  
+  &::-webkit-scrollbar-button:start:decrement,
+  &::-webkit-scrollbar-button:end:increment {
+    display: none !important;
+    background: var(--thirdy) !important;
+  }
+  
+  // Corner
+  &::-webkit-scrollbar-corner {
+    background: var(--thirdy) !important;
+  }
+  
+  .ant-menu {
+    background: var(--thirdy) !important;
+    
+    // Estilos del scrollbar para el contenedor del menú
+    &::-webkit-scrollbar {
+      width: 10px !important;
+      background: var(--thirdy) !important;
+    }
+    
+    &::-webkit-scrollbar-track {
+      background: var(--thirdy) !important;
+      border-radius: 5px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+      background: var(--primary) !important;
+      border-radius: 5px;
+      border: none !important;
+      
+      &:hover {
+        background: var(--primary) !important;
+        cursor: pointer;
+      }
+    }
+    
+    // Botones del scrollbar
+    &::-webkit-scrollbar-button {
+      display: none !important;
+      background: var(--thirdy) !important;
+      height: 0 !important;
+    }
+    
+    &::-webkit-scrollbar-button:start:decrement,
+    &::-webkit-scrollbar-button:end:increment {
+      display: none !important;
+      background: var(--thirdy) !important;
+    }
+    
+    // Corner
+    &::-webkit-scrollbar-corner {
+      background: var(--thirdy) !important;
+    }
+  }
+}
+
+// Estilos adicionales para el contenedor que tiene overflow-y-scroll en la página de productos
+.products-menu-scroll {
+  &::-webkit-scrollbar {
+    width: 10px !important;
+    background: var(--thirdy) !important;
+  }
+  
+  &::-webkit-scrollbar-track {
+    background: var(--thirdy) !important;
+    border-radius: 5px;
+  }
+  
+  &::-webkit-scrollbar-thumb {
+    background: var(--primary) !important;
+    border-radius: 5px;
+    border: none !important;
+    
+    &:hover {
+      background: var(--primary) !important;
+      cursor: pointer;
+    }
+  }
+  
+  // Botones del scrollbar (puntas/arrows)
+  &::-webkit-scrollbar-button {
+    display: none !important;
+    background: var(--thirdy) !important;
+    height: 0 !important;
+  }
+  
+  &::-webkit-scrollbar-button:start:decrement,
+  &::-webkit-scrollbar-button:end:increment {
+    display: none !important;
+    background: var(--thirdy) !important;
+  }
+  
+  // Corner (esquina donde se encuentran scrollbar horizontal y vertical)
+  &::-webkit-scrollbar-corner {
+    background: var(--thirdy) !important;
+  }
+}
+
+.productsWrapper {
+  .layGenPro {
+    > div:first-child {
+      &::-webkit-scrollbar {
+        width: 10px !important;
+        background: var(--thirdy) !important;
+      }
+      
+      &::-webkit-scrollbar-track {
+        background: var(--thirdy) !important;
+        border-radius: 5px;
+      }
+      
+      &::-webkit-scrollbar-thumb {
+        background: var(--primary) !important;
+        border-radius: 5px;
+        border: none !important;
+        
+        &:hover {
+          background: var(--primary) !important;
+          cursor: pointer;
+        }
+      }
+      
+      // Botones del scrollbar
+      &::-webkit-scrollbar-button {
+        display: none !important;
+        background: var(--thirdy) !important;
+        height: 0 !important;
+      }
+      
+      &::-webkit-scrollbar-button:start:decrement,
+      &::-webkit-scrollbar-button:end:increment {
+        display: none !important;
+        background: var(--thirdy) !important;
+      }
+      
+      // Corner
+      &::-webkit-scrollbar-corner {
+        background: var(--thirdy) !important;
+      }
+    }
+  }
+}
+
