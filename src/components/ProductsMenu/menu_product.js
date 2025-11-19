@@ -17,6 +17,7 @@ import { FaRegSnowflake, FaFireExtinguisher } from "react-icons/fa";
 import { TbWavesElectricity } from "react-icons/tb";
 
 import { Menu } from "antd";
+import "../../styles/products-menu.scss";
 
 const MenuProducts = ({ productType, setProductType }) => {
   // Obtener variables CSS sincronizadas con _font-variables.scss
@@ -48,64 +49,208 @@ const MenuProducts = ({ productType, setProductType }) => {
 
   const items = [
     {
-      label: "Building materials",
+      label: (
+        <div
+          className={classNames("flex", "items-center", "justify-start", "gap-2", "w-full")}
+          onClick={(e) => {
+            e.stopPropagation();
+            setProductType("construction");
+          }}
+        >
+          <div className={classNames("flex", "items-center", "justify-center", "w-4")}>
+            <MdConstruction size={20} />
+          </div>
+          <span>Building materials</span>
+        </div>
+      ),
       key: "construction",
-      icon: <MdConstruction size={20} />,
     },
     {
-      label: "Electrical distribution",
+      label: (
+        <div
+          className={classNames("flex", "items-center", "justify-start", "gap-2", "w-full")}
+          onClick={(e) => {
+            e.stopPropagation();
+            setProductType("energy");
+          }}
+        >
+          <div className={classNames("flex", "items-center", "justify-center", "w-4")}>
+            <MdOutlineEnergySavingsLeaf size={20} />
+          </div>
+          <span>Electrical distribution</span>
+        </div>
+      ),
       key: "energy",
-      icon: <MdOutlineEnergySavingsLeaf size={20} />,
     },
     {
-      label: "Bitumen membrane",
+      label: (
+        <div
+          className={classNames("flex", "items-center", "justify-start", "gap-2", "w-full")}
+          onClick={(e) => {
+            e.stopPropagation();
+            setProductType("manto_asfaltico");
+          }}
+        >
+          <div className={classNames("flex", "items-center", "justify-center", "w-4")}>
+            <PiRoadHorizonFill size={20} />
+          </div>
+          <span>Bitumen membrane</span>
+        </div>
+      ),
       key: "manto_asfaltico",
-      icon: <PiRoadHorizonFill size={20} />,
     },
     {
-      label: "Glass and aluminium",
+      label: (
+        <div
+          className={classNames("flex", "items-center", "justify-start", "gap-2", "w-full")}
+          onClick={(e) => {
+            e.stopPropagation();
+            setProductType("glass_aluminium");
+          }}
+        >
+          <div className={classNames("flex", "items-center", "justify-center", "w-4")}>
+            <SettingOutlined />
+          </div>
+          <span>Glass and aluminium</span>
+        </div>
+      ),
       key: "glass_aluminium",
-      icon: <SettingOutlined />,
     },
     {
-      label: "Lifts",
+      label: (
+        <div
+          className={classNames("flex", "items-center", "justify-start", "gap-2", "w-full")}
+          onClick={(e) => {
+            e.stopPropagation();
+            setProductType("ascensores");
+          }}
+        >
+          <div className={classNames("flex", "items-center", "justify-center", "w-4")}>
+            <FaElevator size={20} />
+          </div>
+          <span>Lifts</span>
+        </div>
+      ),
       key: "ascensores",
-      icon: <FaElevator size={20} />,
     },
     {
-      label: "Natural turf",
+      label: (
+        <div
+          className={classNames("flex", "items-center", "justify-start", "gap-2", "w-full")}
+          onClick={(e) => {
+            e.stopPropagation();
+            setProductType("pasto_natural");
+          }}
+        >
+          <div className={classNames("flex", "items-center", "justify-center", "w-4")}>
+            <GiHighGrass size={20} />
+          </div>
+          <span>Natural turf</span>
+        </div>
+      ),
       key: "pasto_natural",
-      icon: <GiHighGrass size={20} />,
     },
     {
-      label: "Wood flooring",
+      label: (
+        <div
+          className={classNames("flex", "items-center", "justify-start", "gap-2", "w-full")}
+          onClick={(e) => {
+            e.stopPropagation();
+            setProductType("piso_madera");
+          }}
+        >
+          <div className={classNames("flex", "items-center", "justify-center", "w-4")}>
+            <BsBricks size={20} />
+          </div>
+          <span>Wood flooring</span>
+        </div>
+      ),
       key: "piso_madera",
-      icon: <BsBricks size={20} />,
     },
     {
-      label: "Air conditioning",
+      label: (
+        <div
+          className={classNames("flex", "items-center", "justify-start", "gap-2", "w-full")}
+          onClick={(e) => {
+            e.stopPropagation();
+            setProductType("aire_acondicionado");
+          }}
+        >
+          <div className={classNames("flex", "items-center", "justify-center", "w-4")}>
+            <FaRegSnowflake size={20} />
+          </div>
+          <span>Air conditioning</span>
+        </div>
+      ),
       key: "aire_acondicionado",
-      icon: <FaRegSnowflake size={20} />,
     },
     {
-      label: "Fire safety systems",
+      label: (
+        <div
+          className={classNames("flex", "items-center", "justify-start", "gap-2", "w-full")}
+          onClick={(e) => {
+            e.stopPropagation();
+            setProductType("contraincendios");
+          }}
+        >
+          <div className={classNames("flex", "items-center", "justify-center", "w-4")}>
+            <FaFireExtinguisher size={20} />
+          </div>
+          <span>Fire safety systems</span>
+        </div>
+      ),
       key: "contraincendios",
-      icon: <FaFireExtinguisher size={20} />,
     },
     {
-      label: "Power generators",
+      label: (
+        <div
+          className={classNames("flex", "items-center", "justify-start", "gap-2", "w-full")}
+          onClick={(e) => {
+            e.stopPropagation();
+            setProductType("generadores_electricos");
+          }}
+        >
+          <div className={classNames("flex", "items-center", "justify-center", "w-4")}>
+            <TbWavesElectricity size={20} />
+          </div>
+          <span>Power generators</span>
+        </div>
+      ),
       key: "generadores_electricos",
-      icon: <TbWavesElectricity size={20} />,
     },
     {
-      label: "Water filtering",
+      label: (
+        <div
+          className={classNames("flex", "items-center", "justify-start", "gap-2", "w-full")}
+          onClick={(e) => {
+            e.stopPropagation();
+            setProductType("filtracion");
+          }}
+        >
+          <div className={classNames("flex", "items-center", "justify-center", "w-4")}>
+            <MdOutlineFilterAlt size={20} />
+          </div>
+          <span>Water filtering</span>
+        </div>
+      ),
       key: "filtracion",
-      icon: <MdOutlineFilterAlt size={20} />,
     },
     {
-      label: "Wastewater treatment",
+      label: (
+        <div
+          className={classNames("flex", "items-center", "justify-start", "gap-2", "w-full")}
+          onClick={(e) => {
+            e.stopPropagation();
+            setProductType("aguas_residuales");
+          }}
+        >
+          <div className={classNames("flex", "items-center", "justify-center", "w-4")}>
+            <MdOutlineWaterDamage size={20} />
+          </div>
+          <span>Wastewater treatment</span>
+        </div>
+      ),
       key: "aguas_residuales",
-      icon: <MdOutlineWaterDamage size={20} />,
     },
   ];
 
@@ -114,24 +259,29 @@ const MenuProducts = ({ productType, setProductType }) => {
       theme={{
         components: {
           Menu: {
-            colorBgContainer: "transparent",
+            colorBgContainer: themeColors.thirdy,
             fontFamily: "popBlack",
             colorText: themeColors.primary,
-            itemSelectedBg: themeColors.orangePrimary,
-            itemSelectedColor: themeColors.thirdy,
-            groupTitleColor: themeColors.primary,
+            itemSelectedBg: "transparent",
+            itemSelectedColor: themeColors.orangePrimary,
             colorBgElevated: themeColors.thirdy,
             lineWidth: 0,
+            itemHoverBg: "transparent",
+            itemActiveBg: "transparent",
+            itemPaddingInline: "12px",
+            itemMarginInline: "0px",
+            borderRadius: 4,
           },
         },
       }}
     >
-      <div className={classNames("pr-5")}>
+      <div className={classNames("pr-5", "menu-products-wrapper")}>
         <Menu
           onClick={(e) => onClick(e)}
           selectedKeys={[productType]}
           mode="vertical"
           items={items}
+          className="products-menu"
         />
       </div>
     </ConfigProvider>

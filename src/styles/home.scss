@@ -210,7 +210,8 @@
             }
           }
 
-          button {
+          button,
+          a {
             display: flex;
             padding: fontVar.$em3;
             justify-content: center;
@@ -221,6 +222,10 @@
             transition: all 0.3s ease-out;
             background-size: 450px;
             background-position: center;
+            text-decoration: none;
+            border: none;
+            background-color: transparent;
+            cursor: pointer;
 
             p {
               font-family: popExtraBold;
@@ -229,7 +234,8 @@
             }
           }
 
-          button:hover {
+          button:hover,
+          a:hover {
             background-color: var(--orangePrimary);
             color: var(--primary);
             border: none;
@@ -247,7 +253,8 @@
             }
           }
 
-          button {
+          button,
+          a {
             background-size: 480px;
           }
         }

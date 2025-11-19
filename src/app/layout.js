@@ -13,7 +13,6 @@ import "../styles/services.scss";
 import "../styles/products.scss";
 import classNames from "classnames";
 import { OrganizationSchema, WebSiteSchema } from "@/components/SEO/StructuredData";
-import { LanguageProvider } from "@/contexts/LanguageContext";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -79,13 +78,11 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={inter.className}>
       <body className={classNames(inter.className, "scrollbar-thin")}>
-        <LanguageProvider>
-          <OrganizationSchema />
-          <WebSiteSchema />
-          {/* <Header /> */}
-          {children}
-          {/* <Footer /> */}
-        </LanguageProvider>
+        <OrganizationSchema />
+        <WebSiteSchema />
+        {/* <Header /> */}
+        {children}
+        {/* <Footer /> */}
       </body>
     </html>
   );

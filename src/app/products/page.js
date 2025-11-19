@@ -2,11 +2,42 @@
 import GeneralLayout from "@/components/GeneralLayout/GeneralLayout";
 import MenuProducts from "@/components/ProductsMenu/menu_product";
 import classNames from "classnames";
-import React, { useState } from "react";
+import React, { useState, useEffect, Suspense, useMemo, useRef } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 import { productos } from "@/utils/products";
 
-const Products = () => {
-  const [productType, setProductType] = useState("construction");
+const ProductsContent = () => {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+  const typeFromUrl = searchParams.get("type");
+  const validTypes = useMemo(() => Object.keys(productos), []);
+  const initialType =
+    typeFromUrl && validTypes.includes(typeFromUrl) ? typeFromUrl : "construction";
+  const [productType, setProductType] = useState(initialType);
+  const isUpdatingFromMenu = useRef(false);
+
+  // Sincronizar el estado con la URL solo cuando la URL cambia externamente
+  useEffect(() => {
+    if (isUpdatingFromMenu.current) {
+      isUpdatingFromMenu.current = false;
+      return;
+    }
+    const newType = typeFromUrl && validTypes.includes(typeFromUrl) ? typeFromUrl : "construction";
+    if (newType !== productType) {
+      setProductType(newType);
+    }
+  }, [typeFromUrl, validTypes, productType]);
+
+  // Función para actualizar el tipo de producto y la URL
+  const handleProductTypeChange = (newType) => {
+    if (validTypes.includes(newType) && newType !== productType) {
+      isUpdatingFromMenu.current = true;
+      setProductType(newType);
+      // Actualizar la URL sin hacer scroll
+      const newUrl = `/products?type=${newType}`;
+      router.replace(newUrl, { scroll: false });
+    }
+  };
 
   return (
     <GeneralLayout showFooter={false}>
@@ -18,13 +49,11 @@ const Products = () => {
               "md:w-3/12",
               "w-full",
               "h-1/2",
-              "scrollbar-track-transparent",
-              "scrollbar-thin",
-              "scrollbar-thumb-primary",
-              "bg-thirdy"
+              "bg-thirdy",
+              "products-menu-scroll"
             )}
           >
-            <MenuProducts productType={productType} setProductType={setProductType} />
+            <MenuProducts productType={productType} setProductType={handleProductTypeChange} />
           </div>
 
           <div
@@ -105,6 +134,14 @@ const Products = () => {
         </div>
       </div>
     </GeneralLayout>
+  );
+};
+
+const Products = () => {
+  return (
+    <Suspense fallback={<div>Loading...</div>}>
+      <ProductsContent />
+    </Suspense>
   );
 };
 
